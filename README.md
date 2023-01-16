@@ -1,8 +1,6 @@
-<h1 align="center">Hi 👋, I'm <a href="https://scibird.netlify.app/" target="_blank">Denis</a>
+<h1 align="center">Hi, I'm <a href="https://scibird.netlify.app/" target="_blank">Denis</a>
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <h3 align="center">A junior Data Scientist, master environmentalist and little ornithologist from Vladivostok 🇷🇺</h3>
-
-- 👨‍💻 All of my projects are available at [https://scibird.netlify.app/](https://scibird.netlify.app/)
 
 - 📝 My scientific articles [https://www.biosoil.ru/Employee/irinyakov](https://www.biosoil.ru/Employee/irinyakov)
 
