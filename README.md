@@ -1,6 +1,6 @@
 <h1 align="center">Пхы <a href="https://scibird.netlify.app/in-dev" target="_blank"> </a>
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">A junior Data Scientist, master environmentalist and little ornithologist from Vladivostok 🇷🇺</h3>
+<h3 align="center">mini Data Scientist, master environmentalist and ornithologist from Vladivostok 🇷🇺</h3>
 
 - 📝 My scientific articles [https://www.biosoil.ru/Employee/irinyakov](https://www.biosoil.ru/Employee/irinyakov)
 
