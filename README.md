@@ -78,7 +78,7 @@
             </a>
         </p>
     <h6 align="center">Нейронные сети:</h6>
-        <p style="margin-left: 170px;"> 
+        <p align="center"> 
             <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
                 <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="20" height="20"/> 
             </a> 
@@ -101,8 +101,8 @@
                 <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png" alt="huggingface" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 370px;">СУБД:</h6>
-        <p style="margin-left: 370px;"> 
+    <h6 align="right">СУБД:</h6>
+        <p align="right"> 
             <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> 
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="20" height="20"/> 
             </a> 
@@ -119,8 +119,8 @@
                 <img src="https://cdn.worldvectorlogo.com/logos/clickhouse.svg" alt="clickhouse" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 370px;">Развертывание:</h6>
-        <p style="margin-left: 370px;"> 
+    <h6 align="right">Развертывание:</h6>
+        <p align="right"> 
             <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> 
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="docker" width="20" height="20"/> 
             </a>
@@ -137,8 +137,8 @@
                 <img src="https://raw.githubusercontent.com/rstudio/hex-stickers/580e9bada770756d25dbd3696159744d1e9c9251/SVG/vetiver.svg" alt="vetivier" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 170px;">Статистика:</h6>
-        <p style="margin-left: 170px;"> 
+    <h6 align="center">Статистика:</h6>
+        <p align="center"> 
             <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="20" height="20"/> 
             </a>
@@ -164,8 +164,8 @@
                 <img src="https://geopandas.org/en/stable/_images/geopandas_icon.png" alt="geopandas" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 170px;">Парсинг:</h6>
-        <p style="margin-left: 170px;"> 
+    <h6 align="center">Парсинг:</h6>
+        <p align="center"> 
             <a href="https://rvest.tidyverse.org/" target="_blank" rel="noreferrer"> 
                 <img src="https://rvest.tidyverse.org/logo.png" alt="rvest" width="20" height="20"/> 
             </a>
@@ -176,8 +176,8 @@
                 <img src="https://seeklogo.com/images/S/selenium-logo-A1B53CEFB0-seeklogo.com.png" alt="selenium" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 370px;">И всякая всячина:</h6>
-        <p style="margin-left: 370px;"> 
+    <h6 align="right">И всякая всячина:</h6>
+        <p align="right"> 
             <a href="https://www.microsoft.com/ru-ru/microsoft-365/excel" target="_blank" rel="noreferrer"> 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" alt="excel" width="20" height="20"/> 
             </a>
