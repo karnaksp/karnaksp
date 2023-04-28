@@ -77,7 +77,7 @@
                 <img src="https://raw.githubusercontent.com/google/jax/c6457f31531f5da30b4236c4a7df84f5c3e53f5a/images/jax_logo.svg" alt="jax" width="20" height="20"/> 
             </a>
         </p>
-    <h6 style="margin-left: 170px;">Нейронные сети:</h6>
+    <h6 align="center">Нейронные сети:</h6>
         <p style="margin-left: 170px;"> 
             <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
                 <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="20" height="20"/> 
@@ -201,9 +201,6 @@
             </a>
         </p>
 
-> <h6> _______________________________________________________________________________________________________</h6>
->
->
 
 <div align="center">
   <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=akscent&hide=css,jupyter notebook, html&layout=compact&card_height=200&langs_count=10&theme=default&hide_border=true&custom_title=Статистика+по+языкам:&title_color=2f850a">
