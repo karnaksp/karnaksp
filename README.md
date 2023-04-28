@@ -204,7 +204,7 @@
 
 <p align="center">
     <a>
-        <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=akscent&hide=css,jupyternotebook,html&layout=compact&card_height=200&langs_count=10&theme=default&hide_border=true&custom_title=Статистика+по+языкам:&title_color=2f850a">
+        <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=akscent&hide=css,jupyter_notebook,html&layout=compact&card_height=200&langs_count=10&theme=default&hide_border=true&custom_title=Статистика+по+языкам:&title_color=2f850a">
     </a>
 </p>
 
