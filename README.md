@@ -1,6 +1,5 @@
 
-<details>
-    <summary> <b> <h3> READ ME </h3> </i> </summary> 
+<details><summary> <b> <h3> READ ME </h3> </i> </summary> 
 
 - 📄 Check out my [Resume](https://drive.google.com/file/d/11I-BohqVzxg7jRKndSpuDl7Sla-CA4BH/view?usp=sharing)
 - 👨‍💻 Explore my projects in my [Portf~~e~~lio](https://www.datascienceportfol.io/karnaksp)
@@ -29,8 +28,7 @@
             Mojo 🔥
         </a> 
 
-<details>
-    <summary> <b> <h3> WRITE ME </h3> </i> </summary> 
+<details><summary> <b> <h3> WRITE ME </h3> </i> </summary> 
 
 
 [![Telegram](https://img.shields.io/badge/telegram-%2312100E.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/calmeds)
