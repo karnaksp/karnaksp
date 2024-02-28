@@ -28,7 +28,9 @@
             Mojo 🔥
         </a> 
 
-<details><summary> <b> <h3> WRITE ME </h3> </i> </summary> 
+<h3> <details>
+    <summary> <b> WRITE ME </i> </summary> 
+</h3>
 
 
 [![Telegram](https://img.shields.io/badge/telegram-%2312100E.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/calmeds)
