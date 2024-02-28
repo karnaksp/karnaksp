@@ -1,15 +1,4 @@
-
-<h3>
-    <details><summary> <b> <h3> READ ME </h3> </i> </summary> 
-
-- 📄 Check out my [Resume](https://drive.google.com/file/d/11I-BohqVzxg7jRKndSpuDl7Sla-CA4BH/view?usp=sharing)
-- 👨‍💻 Explore my projects in my [Portf~~e~~lio](https://www.datascienceportfol.io/karnaksp)
-- 🔬 Read my scientific work in the field of [ornithology](https://www.biosoil.ru/Employee/irinyakov)
-</details>
-</h3>
-
-
-<h4 align="left">My langs</h3>
+<h4 align="left"></h3>
     <p align="left"> 
         <a href="https://www.r-project.org" target="_blank" rel="noreferrer"> 
             <img src="https://www.r-project.org/logo/Rlogo.svg" alt="R" width="20" height="20"/>
@@ -29,6 +18,17 @@
         <a href="https://www.modular.com/max/mojo" target="_blank" rel="noreferrer" style="vertical-align: middle; line-height: 10px;"> 
             Mojo 🔥
         </a> 
+<h3>
+    <details><summary> <b> <h3> READ ME </h3> </i> </summary> 
+
+- 📄 Check out my [Resume](https://drive.google.com/file/d/11I-BohqVzxg7jRKndSpuDl7Sla-CA4BH/view?usp=sharing)
+- 👨‍💻 Explore my projects in my [Portf~~e~~lio](https://www.datascienceportfol.io/karnaksp)
+- 🔬 Read my scientific work in the field of [ornithology](https://www.biosoil.ru/Employee/irinyakov)
+</details>
+</h3>
+
+
+
 
 <h3> <details>
     <summary> <b> WRITE ME </i> </summary> 
