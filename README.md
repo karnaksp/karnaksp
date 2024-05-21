@@ -38,7 +38,7 @@
 <h3> <details>
   <summary> <b> STAT ME</i> </summary>
 
-  [![Github Stats By pierpaolo28](https://github-readme-stats.vercel.app/api?username=akscent&hide=prs&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)]()
-  [![Github Langs By akscent](https://github-readme-stats.vercel.app/api/top-langs/?username=akscent&hide=css,jupyter+notebook,html&layout=compact&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)]()
+  [![Github Stats By karnaksp](https://github-readme-stats.vercel.app/api?username=karnaksp&hide=prs&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)]()
+  [![Github Langs By karnaksp](https://github-readme-stats.vercel.app/api/top-langs/?username=karnaksp&hide=css,jupyter+notebook,html&layout=compact&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)]()
 -----
 
