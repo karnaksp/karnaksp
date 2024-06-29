@@ -20,7 +20,7 @@
 <h3>
     <details><summary> <b> READ ME </i> </summary> 
 
-- 📄 Check out my [Resume](https://drive.google.com/file/d/1VCM46lNeM1c9KwHs2Zkn4bdOfEh3EJ5z/view?usp=sharing)
+- 📄 Check out my [Resume](https://drive.google.com/file/d/1JNinbURWIKpa2txnFc6QqEAOEW1o87J2/view?usp=sharing)
 - 👨‍💻 Explore my projects in my [Portf~~e~~lio](https://www.datascienceportfol.io/karnaksp)
 - 🔬 Read my scientific work in the field of [ornithology](https://www.biosoil.ru/Employee/irinyakov)
 </details>
