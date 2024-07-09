@@ -38,6 +38,6 @@
 <h3> <details>
   <summary> <b> STAT ME</i> </summary>
 
-  [![Github Langs By karnaksp](https://github-readme-stats.vercel.app/api/top-langs/?username=karnaksp&hide=css,jupyter+notebook,html&layout=compact&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)]()
+  [![Github Langs By karnaksp](github-readme-stats-o65u7k8gp-karnaksps-projects.vercel.app/api/top-langs/?username=karnaksp&size_weight=0.5&count_weight=0.5&langs_count=8&layout=compact)
 -----
 
