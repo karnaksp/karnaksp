@@ -9,7 +9,7 @@
 </h3>
 
 <h3> <details>
-    <summary> <b> WRITE ME </i> </summary> 
+    <summary> <b> CALL ME (maybe) </i> </summary> 
 
 [![Telegram](https://img.shields.io/badge/telegram-%2312100E.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/calmeds)
 [![Email](https://img.shields.io/badge/email-%23EA4335.svg?&style=for-the-badge&logo=gmail&logoColor=white)](mailto:irinyakov2016@yandex.ru)
