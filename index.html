@@ -31,6 +31,7 @@
             padding-top: 30px;
             min-height: 70px;
             border-bottom: #e8491d 3px solid;
+            position: relative;
         }
         header a {
             color: #ffffff;
@@ -52,6 +53,7 @@
         }
         header #branding h1 {
             margin: 0;
+            padding-right: 60px;
         }
         header nav {
             float: right;
@@ -103,6 +105,16 @@
             margin-bottom: 10px;
         }
 
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; 
+            object-fit: cover;
+            top: 20px;
+            left: 120px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
         @media (max-width: 768px) {
             .skill-card {
                 width: 100%;
@@ -118,7 +130,6 @@
         <div class="container">
             <div id="branding">
                 <h1>CV Денис Ириняков</h1>
-                <img src="photo/p2.jpg" alt="Фото" class="profile-photo">
             </div>
             <nav>
                 <ul>
@@ -132,9 +143,12 @@
         </div>
     </header>
 
+    
+
     <section id="about" class="box">
         <div class="container">
             <h2>Денис Ириняков</h2>
+            <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/photo/p2.jpg" alt="Фото" class="profile-photo">
             <p>Middle Data Developer</p>
             <p>Прогрессирующий разработчик в области работы с данными. Сосредоточен на улучшении навыков работы дата инженера и развитии софт-скиллов. Влюблен в код и мечтаю о команде разработчиков с горящими глазами.</p>
             <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>

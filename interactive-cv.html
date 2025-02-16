@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное CV</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .intro {
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container {
+            padding: 20px;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .parallax {
+            background: url('https://source.unsplash.com/1600x900/?technology') fixed;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Твое Имя</h1>
+        <h2>Разработчик | Дизайнер | Энтузиаст</h2>
+    </div>
+    <div class="parallax">Добро пожаловать!</div>
+    <div class="container">
+        <h2>Навыки</h2>
+        <canvas id="skillsChart" width="400" height="200"></canvas>
+        <h2>Опыт</h2>
+        <div class="skills">
+            <div class="card">Frontend: React, Vue</div>
+            <div class="card">Backend: Node.js, Python</div>
+            <div class="card">Базы данных: PostgreSQL, MongoDB</div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['HTML', 'CSS', 'JavaScript', 'Python', 'SQL'],
+                datasets: [{
+                    label: 'Уровень навыков',
+                    data: [90, 85, 80, 75, 70],
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)'
+                }]
+            }
+        });
+    </script>
+    <section id="hard-skills" class="box">
+        <div class="container">
+            <h2>Hard Skills</h2>
+            <canvas id="skillsChart" width="400" height="200"></canvas>
+            <form id="addSkillForm">
+                <input type="text" id="skillName" placeholder="Название навыка" required>
+                <input type="number" id="skillLevel" placeholder="Уровень (0-100)" min="0" max="100" required>
+                <button type="submit">Добавить навык</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Python', 'Greenplum', 'Docker', 'Kafka', 'Airflow'],
+                datasets: [{
+                    label: 'Уровень владения',
+                    data: [85, 70, 60, 50, 75],
+                    backgroundColor: ['#FF6B6B', '#4ECDC4', '#FF6B6B', '#4ECDC4', '#FF6B6B'],
+                    borderColor: ['#FF6B6B', '#4ECDC4', '#FF6B6B', '#4ECDC4', '#FF6B6B'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    
+        document.getElementById('addSkillForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const skillName = document.getElementById('skillName').value;
+            const skillLevel = document.getElementById('skillLevel').value;
+            skillsChart.data.labels.push(skillName);
+            skillsChart.data.datasets[0].data.push(skillLevel);
+            skillsChart.update();
+            document.getElementById('skillName').value = '';
+            document.getElementById('skillLevel').value = '';
+        });
+    </script>
+</body>
+</html>
