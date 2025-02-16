@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            hljs.highlightAll();
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .box {
+            padding: 20px;
+            background: #fff;
+            border: #ddd 1px solid;
+        }
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .social-icon {
+            margin: 0 5px;
+        }
+        .social-icon a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .code-container { background: #272822; padding: 15px; border-radius: 8px; overflow-x: auto; }
+        pre { margin: 0; }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: calc(33.33% - 10px);
+            box-sizing: border-box;
+        }
+
+        .skill-icon {
+            width: 50%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .skill-card {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>CV Денис Ириняков</h1>
+                <img src="photo/p2.jpg" alt="Фото" class="profile-photo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#experience">Опыт</a></li>
+                    <li><a href="#education">Образование</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="box">
+        <div class="container">
+            <h2>Денис Ириняков</h2>
+            <p>Middle Data Developer</p>
+            <p>Прогрессирующий разработчик в области работы с данными. Сосредоточен на улучшении навыков работы дата инженера и развитии софт-скиллов. Влюблен в код и мечтаю о команде разработчиков с горящими глазами.</p>
+            <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Инструменты и технологии</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/greenplum/greenplum-ar21.svg" alt="Greenplum" class="skill-icon">
+                <p>Работаю с Greenplum для реализации аналитических решений. Создаю таблицы, представления, функции и процедуры на PL/pgSQL, применяю партиционирование и индексацию для оптимизации запросов. Использую методологии Kimball и Data Vault 2.0 для проектирования архитектуры данных.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="Python" class="skill-icon">
+                <p>Использую Python для решения различных задач — написание ETL-процессов, аналитика данных, создание ml моделей, визуализация, разработка веб-приложений.Также применяю язык для автоматизации рутинных задач, создания Telegram-ботов и разработки графического интерфейса с помощью PyQt.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="Shell" class="skill-icon">
+                <p>Написал множество скриптов на Bash и PowerShell для автоматизации процессов. Использую эти инструменты для управления файловой системой, создания резервных копий и мониторинга серверов. Работаю с cron и Windows Task Scheduler для планирования задач.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" class="skill-icon">
+                <p>Применяю Docker для контейнеризации приложений. Постоянно пишу Dockerfile для разных проектов, используя многоэтапные сборки для минимизации размера образов, docker-compose для оркестрации контейнеров и CI/CD пайплайны с помощью GitHub Actions и GitLab Runner.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg" alt="Kafka" class="skill-icon">
+                <p>Использовал Apache Kafka для обработки потоковых данных и влюбился в этого брокера. Kafka Streams для преобразования данных, разделение тем на партиции для повышения производительности.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.apache.org/logos/originals/airflow-1.svg" alt="Apache Airflow" class="skill-icon">
+                <p>Работаю с Apache Airflow для оркестрации ETL/ELT процессов. Пишу потоки данных, используя DAG Factory - подобный фреймворк для генерации дагов из YAML-конфигураций. Реализовывал динамическую генерацию задач на основе метаданных.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Selenium_logo.svg" alt="Selenium" class="skill-icon">
+                <p>Использую Selenium для автоматизации взаимодействия с веб-браузерами. Разрабатываю скрипты для парсинга данных с динамически генерируемых сайтов, тестирования пользовательских сценариев и автоматизации рутинных действий в браузере. Применяю headless режим для оптимизации работы.</p>
+            </div>
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-ar21.svg" alt="PostgreSQL" class="skill-icon">
+                <p>Больше всего работаю с PostgreSQL для создания баз данных, оптимизации запросов и реализации сложных бизнес-логик через хранимые процедуры и триггеры.</p>
+            </div>
+            <div class="skill-card">
+                <img src="./img/ollama.svg" alt="LLM" class="skill-icon">
+                <p>Использую LLM (Qwen, Deepseek, Mistral, Perplexity, Chatgpt) в Ollama для автоматической генерации рутинного кода, документации и шаблонных решений, что значительно ускоряет процесс разработки.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="box">
+        <div class="container">
+            <h2>Ключевые компетенции</h2>
+            <ul>
+                <li>Open Source BI (Apache Superset)</li>
+                <li>Yandex DataLens (SaaS)</li>
+                <li>ETL, Data Pipelines</li>
+                <li>Qlik Sense</li>
+                <li>Уведомления (Telegram, Slack, Yandex Messenger)</li>
+                <li>Программирование (Python)</li>
+                <li>Хранение данных (ClickHouse)</li>
+                <li>Оркестрация (Apache Airflow)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience" class="box">
+        <div class="container">
+            <h2>Опыт работы</h2>
+            <h3>Sber Eapteka (December 2023 - November 2024)</h3>
+            <p>TeamLead BI (Yandex DataLens)</p>
+            <ul>
+                <li>Автоматизация обновления данных в датамартах.</li>
+                <li>Руководство проектом по переезду с BigQuery на Yandex Cloud.</li>
+                <li>Разработка ключевых датамартов в ClickHouse.</li>
+                <li>Управление командой для улучшения отчетности по финансам, операциям, маркетингу.</li>
+            </ul>
+
+            <h3>TheSoul Publishing (August 2020 - December 2023)</h3>
+            <p>Senior BI Developer</p>
+            <ul>
+                <li>Автоматизация и визуализация основных финансовых отчетов.</li>
+                <li>Внедрение Superset, снижение затрат на лицензирование Qlik.</li>
+                <li>Разработка ETL процессов для извлечения данных из Facebook API.</li>
+            </ul>
+
+            <h3>Luding LLC (May 2017 - July 2020)</h3>
+            <p>Senior BI Developer</p>
+            <ul>
+                <li>Разработка новых аналитических приложений и поддержка существующих в QlikView.</li>
+                <li>Разработка кастомных утилит для работы с API.</li>
+            </ul>
+
+            <h3>Dixy (Retail Group) (November 2014 - May 2017)</h3>
+            <p>IT Consultant (Oracle Hyperion, QlikView)</p>
+            <ul>
+                <li>Проект по внедрению системы бюджетирования на базе Hyperion Planning.</li>
+                <li>Оптимизация интеграционных решений.</li>
+            </ul>
+
+            <h3>AlfaStrakhovanie Group (September 2013 - November 2014)</h3>
+            <p>Systems Analyst (Hyperion Planning, QlikView)</p>
+            <ul>
+                <li>Поддержка и улучшение функциональности Oracle Hyperion Planning.</li>
+                <li>Разработка аналитических моделей данных в QlikView.</li>
+            </ul>
+
+            <h3>Glowbyte Consulting (October 2011 - August 2013)</h3>
+            <p>IT Consultant (SAS, Financial Solutions)</p>
+            <ul>
+                <li>Консультирование внешних клиентов, обновление систем, участие в пресейлах.</li>
+                <li>Исследование новых систем, подготовка презентаций решений для пресейла.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="box">
+        <div class="container">
+            <h2>Образование</h2>
+            <p><strong>Бауманская МГТУ</strong> (2006 - 2012)</p>
+            <p>Инженер, Факультет робототехники и комплексной автоматизации: Автоматизация технологических процессов и производств</p>
+        </div>
+    </section>
+
+    <section id="contact" class="box">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ivshamaev/" target="_blank">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/ivanshamaev" target="_blank">GitHub Profile</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Денис Ириняков</p>
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/ivshamaev/" target="_blank"><img src="https://ivan-shamaev.ru/cv/wp-content/uploads/2021/11/cropped-logo_ivan_shamaev.png" alt="LinkedIn" width="20"></a>
+            <a href="https://github.com/ivanshamaev" target="_blank"><img src="https://ivan-shamaev.ru/cv/wp-content/uploads/2021/11/cropped-logo_ivan_shamaev.png" alt="GitHub" width="20"></a>
+        </div>
+    </footer>
+</body>
+</html>
