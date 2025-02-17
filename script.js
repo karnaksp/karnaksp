@@ -21,34 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ganttItems.forEach((item) => {
         const startYear = parseInt(item.getAttribute("data-start"));
         const endYear = parseInt(item.getAttribute("data-end"));
-        const title = item.getAttribute("data-title");
-        const description = item.getAttribute("data-description");
 
-        // Рассчитываем ширину полосы
-        const containerWidth = document.querySelector(".gantt-chart").offsetWidth;
+        // Рассчитываем ширину и позицию бара
+        const containerWidth = document.querySelector(".gantt-container").offsetWidth;
         const yearRange = 2025 - 2005; // Примерный диапазон лет
         const barWidth = ((endYear - startYear) / yearRange) * containerWidth;
-
-        // Позиционируем полосу
-        const bar = item.querySelector(".gantt-bar");
         const offsetLeft = ((startYear - 2005) / yearRange) * containerWidth;
+
+        const bar = item.querySelector(".gantt-bar");
         bar.style.width = `${barWidth}px`;
         bar.style.left = `${offsetLeft}px`;
 
-        // Создаем tooltip
-        const tooltip = document.createElement("div");
-        tooltip.className = "tooltip";
-        tooltip.innerHTML = `
-            <strong>${title} (${startYear}-${endYear})</strong><br>
-            ${description}
-        `;
-        item.appendChild(tooltip);
-
-        // Позиционируем tooltip
-        item.addEventListener("mouseenter", () => {
-            const rect = item.getBoundingClientRect();
-            tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 10}px`;
-            tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
-        });
+        // Добавляем тултип
+        const description = `Годы: ${startYear}-${endYear}`;
+        bar.setAttribute("data-tooltip", description);
     });
 });
