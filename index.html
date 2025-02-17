@@ -74,15 +74,6 @@
             text-align: center;
             padding: 10px 0;
         }
-        .social-icon {
-            margin: 0 5px;
-        }
-        .social-icon a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .code-container { background: #272822; padding: 15px; border-radius: 8px; overflow-x: auto; }
-        pre { margin: 0; }
 
         .skills-container {
             display: flex;
@@ -125,7 +116,6 @@
             margin-top: 20px;
         }
 
-        /* Общий стиль для контейнера прогресс-бара */
         .elementor-progress-wrapper {
             margin-bottom: 15px;
             background-color: #f4f4f4;
@@ -133,7 +123,6 @@
             overflow: hidden;
         }
 
-        /* Стиль прогресс-бара */
         .elementor-progress-bar {
             position: relative;
             height: 30px;
@@ -143,44 +132,12 @@
             text-align: right;
             padding-right: 10px;
             background-color: #35427a;
-            transition: width 0.3s ease-in-out; /* Анимация заполнения */
+            width: 0px;
+            transition: width 1s ease-in-out;
             cursor: pointer;
+            overflow: hidden;
         }
 
-        /* Стиль для tooltip */
-        .elementor-progress-bar[data-tooltip]:hover::after {
-            content: attr(data-tooltip); /* Берет текст из атрибута data-tooltip */
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            white-space: nowrap;
-            z-index: 10;
-            font-size: 12px;
-        }
-
-        /* Стиль для стрелки tooltip */
-        .elementor-progress-bar[data-tooltip]:hover::before {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-            width: 10px;
-            height: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 9;
-        }
-
-        /* Важно: При наведении не меняем ширину */
-        .elementor-progress-bar:hover {
-            width: inherit !important; /* Сохраняем текущую ширину */
-        }
-        /* Общие стили */
         #gantt-chart {
             margin: 40px 0;
         }
@@ -195,21 +152,20 @@
 
         .gantt-year {
             position: relative;
-            width: 14%; /* Ширина каждой метки (в зависимости от количества лет) */
+            width: 14%;
             text-align: center;
         }
 
         .gantt-container {
             position: relative;
-            height: 150px; /* Высота контейнера для баров */
+            height: 200px;
             background-color: #f4f4f4;
             border-radius: 8px;
             overflow: hidden;
         }
 
         .gantt-item {
-            position: absolute;
-            top: calc(50% - 10px); /* Центрируем бары по вертикали */
+            position: relative;
         }
 
         .gantt-bar {
@@ -223,7 +179,7 @@
 
         .gantt-label {
             position: absolute;
-            top: -25px; /* Размещаем название над баром */
+            top: -25px;
             left: 50%;
             transform: translateX(-50%);
             white-space: nowrap;
@@ -231,7 +187,6 @@
             color: #333;
         }
 
-        /* Тултип при наведении */
         .gantt-bar:hover::after {
             content: attr(data-tooltip);
             position: absolute;
@@ -252,12 +207,15 @@
             position: absolute;
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 10px;
+            padding: 8px 12px;
             border-radius: 5px;
-            z-index: 10;
             white-space: pre-wrap;
             max-width: 300px;
+            font-size: 12px;
+            z-index: 1000;
+            pointer-events: none; /* Чтобы тултип не перехватывал события */
         }
+
         @media (max-width: 768px) {
             .skill-card {
                 width: 100%;
@@ -269,6 +227,31 @@
                 font-size: 12px;
             }
         }
+        @media (min-width: 768px) {
+            .content-wrapper {
+                display: flex;
+                gap: 20px;
+            }
+
+            #skills {
+                flex: 1;
+                max-width: 33%;
+            }
+
+            #experience {
+                flex: 2;
+            }
+        }
+        @media (max-width: 767px) {
+            .content-wrapper {
+                display: block;
+            }
+
+            #skills, #experience {
+                max-width: 100%;
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
@@ -340,138 +323,140 @@
                 <p>Больше всего работаю с PostgreSQL для создания баз данных, оптимизации запросов и реализации сложных бизнес-логик через хранимые процедуры и триггеры.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/464f3fa9522cb7ba6d48fcba4eb336c5e0eb61ef/img/ollama.svg" alt="LLM" style="width: 35%; height: 30%;">
+                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/464f3fa9522cb7ba6d48fcba4eb336c5e0eb61ef/img/ollama.svg" alt="LLM" data-width="35%; height: 30%;">
                 <p>Использую LLM (Qwen, Deepseek, Mistral, Perplexity, Chatgpt) в Ollama для автоматической генерации рутинного кода, документации и шаблонных решений, что значительно ускоряет процесс разработки.</p>
             </div>
         </div>
-    </section>
+        </section>
+        <div class="content-wrapper">
+        <section id="skills" class="box">
+            <div class="container">
+                <h2>Уровень владения</h2>
+                <div class="competencies">
+                    <div class="elementor-progress-wrapper">
+                        <div class="elementor-progress-bar" data-width="90%" 
+                            data-tooltip="Логическое написание потоков данных со всевозможными преобразованиями.">
+                            <span class="elementor-progress-text">ETL/ELT</span>
+                        </div>
+                    </div>                
 
-    <section id="skills" class="box">
-        <div class="container">
-            <h2>Уровень владения</h2>
-            <div class="competencies">
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" aria-valuetext="90% (ETL, Data Pipelines)">
-                    <div class="elementor-progress-bar" style="width: 90%;" data-max="100" data-tooltip="Логическое написание потоков данных со всевозможными преобразованиями.">
-                        <span class="elementor-progress-text">ETL/ELT</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="85%"  data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, MySQL, SQLite, Neo4j, ChromaDB.">
+                            <span class="elementor-progress-text">Хранение данных (PSQL, CH, GP)</span>
+                        </div>
                     </div>
-                </div>
+        
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="80%"  data-tooltip="Стандартный SQL и процедурный SQL + Pl/pgSQL.">
+                            <span class="elementor-progress-text">SQL + Pl/pgSQL</span>
+                        </div>
+                    </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" aria-valuetext="80% (DB)">
-                    <div class="elementor-progress-bar" style="width: 80%;" data-max="100" data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, MySQL, SQLite, Neo4j, ChromaDB.">
-                        <span class="elementor-progress-text">Хранение данных (PSQL, CH, GP)</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="73%"  data-tooltip="Написание .Dockerfile в микросервисной архитектуре, сборка через docker compose / Vagranfile, оркестрация в docker swarm, мониторинг на Prometheus. Настройка сетей на виртуальных машинах.">
+                            <span class="elementor-progress-text">Контейнирезация(Docker, VM)</span>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88" aria-valuetext="88% (Yandex DataLens)">
-                    <div class="elementor-progress-bar" style="width: 75%;" data-max="100" data-tooltip="Стандартный SQL и процедурный SQL + Pl/pgSQL.">
-                        <span class="elementor-progress-text">SQL + Pl/pgSQL</span>
-                    </div>
-                </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" aria-valuetext="70% (Open Source BI (Apache Superset))">
-                    <div class="elementor-progress-bar" style="width: 73%;" data-max="100" data-tooltip="Написание .Dockerfile в микросервисной архитектуре, сборка через docker compose / Vagranfile, оркестрация в docker swarm, мониторинг на Prometheus. Настройка сетей на виртуальных машинах.">
-                        <span class="elementor-progress-text">Контейнирезация(Docker, VM)</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="71%"  data-tooltip="Bash, PowerShell, cmd. Написание скриптов, crud, мониторинг unix-подобных систем.">
+                            <span class="elementor-progress-text">Shell</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" aria-valuetext="80% (DB)">
-                    <div class="elementor-progress-bar" style="width: 71%;" data-max="100" data-tooltip="Bash, PowerShell, cmd. Написание скриптов, crud, мониторинг unix-подобных систем.">
-                        <span class="elementor-progress-text">Shell</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="70%"  data-tooltip="Pep 8, sqlAlchemy, asyncio, unittest, pytest, fastapi, selemium, bs4, pandas, matplotlib, scikit-learn и т. д..">
+                            <span class="elementor-progress-text">Python</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" aria-valuetext="85% (Программирование (Python))">
-                    <div class="elementor-progress-bar" style="width: 70%;" data-max="100" data-tooltip="Pep 8, sqlAlchemy, asyncio, unittest, pytest, fastapi, selemium, bs4, pandas, matplotlib, scikit-learn и т. д..">
-                        <span class="elementor-progress-text">Python</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="67%"  data-tooltip="В большей степени C, работа с памятью, написание библиотек, ускорение пайтон операций, написание расширений для postgresql, написание программ, совместимых с QT.">
+                            <span class="elementor-progress-text">С/C++</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" aria-valuetext="85% (Программирование (Python))">
-                    <div class="elementor-progress-bar" style="width: 67%;" data-max="100" data-tooltip="В большей степени C, работа с памятью, написание библиотек, ускорение пайтон операций, написание расширений для postgresql, написание программ, совместимых с QT.">
-                        <span class="elementor-progress-text">С/C++</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="66%"  data-tooltip="Обучение ml моделей, подготовка данных, экстракция и трансформация признаков, генерация признаков, статистика.">
+                            <span class="elementor-progress-text">ML и анализ данных</span>
+                        </div>
                     </div>
-                </div>
+        
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="65%"  data-tooltip="Хранилище данных, озеро данных, data mesh, Data Vault, Anchor, Kimball, SCD.">
+                            <span class="elementor-progress-text">Архитектура БД (DWH, DL, DM)</span>
+                        </div>
+                    </div>
+        
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="60%" >
+                            <span class="elementor-progress-text">Оркестрация (Apache Airflow)</span>
+                        </div>
+                    </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65" aria-valuetext="65% (Уведомления (Telegram, Slack, Yandex Messenger))">
-                    <div class="elementor-progress-bar" style="width: 66%;" data-max="100" data-tooltip="Обучение ml моделей, подготовка данных, экстракция и трансформация признаков, генерация признаков, статистика.">
-                        <span class="elementor-progress-text">ML и анализ данных</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="55%"  data-tooltip="GitHub Actions, GitLab Runner.">
+                            <span class="elementor-progress-text">CI/CD</span>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" aria-valuetext="75% (Хранение данных (ClickHouse))">
-                    <div class="elementor-progress-bar" style="width: 65%;" data-max="100" data-tooltip="Хранилище данных, озеро данных, data mesh, Data Vault, Anchor, Kimball, SCD.">
-                        <span class="elementor-progress-text">Архитектура БД (DWH, DL, DM)</span>
-                    </div>
-                </div>
-    
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80% (Оркестрация (Apache Airflow))">
-                    <div class="elementor-progress-bar" style="width: 60%;" data-max="100">
-                        <span class="elementor-progress-text">Оркестрация (Apache Airflow)</span>
-                    </div>
-                </div>
 
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65" aria-valuetext="65% (Уведомления (Telegram, Slack, Yandex Messenger))">
-                    <div class="elementor-progress-bar" style="width: 55%;" data-max="100" data-tooltip="GitHub Actions, GitLab Runner.">
-                        <span class="elementor-progress-text">CI/CD</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="40%" >
+                            <span class="elementor-progress-text">Kafka, Redis</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80% (Оркестрация (Apache Airflow))">
-                    <div class="elementor-progress-bar" style="width: 40%;" data-max="100">
-                        <span class="elementor-progress-text">Kafka, Redis</span>
-                    </div>
-                </div>
-                <div class="elementor-progress-wrapper progress-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80% (Оркестрация (Apache Airflow))">
-                    <div class="elementor-progress-bar" style="width: 20%;" data-max="100">
-                        <span class="elementor-progress-text">Go</span>
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="20%" >
+                            <span class="elementor-progress-text">Go</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="experience" class="box">
-        <div class="container">
-            <h2>Опыт работы</h2>
-            <h3>Data Engineer в Axenix, г. Санкт-Петербург (Август 2024 – Настоящее время)</h3>
-            <p><strong>Разработка ETL/ELT потоков в Airflow через YAML + JSON на фреймворке Python</strong></p>
-            <ul>
-                <li>Разработал модульную систему динамической генерации DAG'ов на основе YAML-конфигураций, что позволило сократить время настройки новых ETL-процессов на 40%.</li>
-                <li>Автоматизировал процесс тестирования качества данных с использованием Python, Bash и SQL, создав инструмент для детектирования аномалий и проверки целостности данных.</li>
-                <li>Преобразовал сложные маппинги бизнес-логики в эффективные ETL-потоки, улучшив производительность обработки данных на 30%.</li>
-                <li>Создал хранимые процедуры, функции, витрины и представления в Greenplum для поддержки операционных процессов в поддержке качества данных.</li>
-                <li>Обеспечил интеграцию различных источников данных (ClickHouse, Oracle, Hive).</li>
-                <li>Поддерживал архитектуру Data Vault 2.0, внедрял версионное хранение данных для обеспечения возможности отката изменений.</li>
-                <li>Осуществлял эффективную коммуникацию с представителями других команд.</li>
-            </ul>
-    
-            <h3>Data Scientist в Spacecode, г. Краснодар (Апрель 2024 – Август 2024), удаленно</h3>
-            <p><strong>Разработка AI-решений для бизнеса</strong></p>
-            <ul>
-                <li>Разработал многофункционального ассистента на базе LLM с использованием моделей HuggingFace, RAG-подхода, LangChain и Unstructured через LLAMA_CPP/VLLM. Ассистент успешно применялся для автоматизации клиентской поддержки и анализа документов.</li>
-                <li>Создал систему динамического ценообразования с использованием интерпретируемых регрессионных моделей, что, по оценкам, позволит увеличить прибыль компании на 15%.</li>
-                <li>Использовал Apache Airflow для разработки ETL-пайплайна, обеспечивающего актуальность данных для ML-моделей.</li>
-                <li>Внедрил DVC для версионирования данных моделей, что значительно упростило их отслеживание и воспроизведение результатов.</li>
-            </ul>
-    
-            <h3>Data Analyst в АСК «ДиректСервис», г. Новосибирск (Сентябрь 2023 – Настоящее время), удаленно</h3>
-            <p><strong>Разработка и поддержка системы управления данными</strong></p>
-            <ul>
-                <li>Реализовал с нуля enterprise-level Data Warehouse (DWH) на масштабах десятков терабайт данных, используя Greenplum и ClickHouse как основные хранилища.</li>
-                <li>Автоматизировал процесс обновления витрин данных, создав комплексный пайплайн на основе Shell-скриптов и Windows Task Scheduler, что сократило время обработки данных с нескольких часов до 30 минут.</li>
-                <li>Настроил механизм миграции данных из Greenplum/ClickHouse в PostgreSQL, обеспечив бесперебойную работу аналитических систем.</li>
-                <li>Совместно с системными аналитиками разработал методологии мониторинга и оптимизации производительности DWH, что позволило повысить скорость выполнения запросов на 50%.</li>
-            </ul>
-    
-            <h3>ML Engineer в ООО «ColorDent», г. Москва (Июнь 2023 – Декабрь 2023), удаленно</h3>
-            <p><strong>Разработка ML-решений для стоматологической практики</strong></p>
-            <ul>
-                <li>Разработал ML-классификатор изображений зубов для диагностики заболеваний, используя OpenCV и TensorFlow Lite. Модель достигла точности более 95% на тестовых данных.</li>
-                <li>Интегрировал ML-модели в мобильное приложение с использованием MLflow для управления версиями моделей и DVC для версионирования данных.</li>
-                <li>Оптимизировал производительность модели для работы на устройствах с ограниченными ресурсами, что позволило использовать ее на мобильных платформах без значительной потери качества.</li>
-                <li>Разработал систему отслеживания метрик обучения моделей и внедрил автоматическое тестирование для обеспечения высокого качества решения.</li>
-            </ul>
-        </div>
-    </section>
+        </section>
+        <section id="experience" class="box">
+            <div class="container">
+                <h2>Опыт работы</h2>
+                <h3>Data Engineer в Axenix, г. Санкт-Петербург (Август 2024 – Настоящее время)</h3>
+                <p><strong>Разработка ETL/ELT потоков в Airflow через YAML + JSON на фреймворке Python</strong></p>
+                <ul>
+                    <li>Разработал модульную систему динамической генерации DAG'ов на основе YAML-конфигураций, что позволило сократить время настройки новых ETL-процессов на 40%.</li>
+                    <li>Автоматизировал процесс тестирования качества данных с использованием Python, Bash и SQL, создав инструмент для детектирования аномалий и проверки целостности данных.</li>
+                    <li>Преобразовал сложные маппинги бизнес-логики в эффективные ETL-потоки, улучшив производительность обработки данных на 30%.</li>
+                    <li>Создал хранимые процедуры, функции, витрины и представления в Greenplum для поддержки операционных процессов в поддержке качества данных.</li>
+                    <li>Обеспечил интеграцию различных источников данных (ClickHouse, Oracle, Hive).</li>
+                    <li>Поддерживал архитектуру Data Vault 2.0, внедрял версионное хранение данных для обеспечения возможности отката изменений.</li>
+                    <li>Осуществлял эффективную коммуникацию с представителями других команд.</li>
+                </ul>
+        
+                <h3>Data Scientist в Spacecode, г. Краснодар (Апрель 2024 – Август 2024), удаленно</h3>
+                <p><strong>Разработка AI-решений для бизнеса</strong></p>
+                <ul>
+                    <li>Разработал многофункционального ассистента на базе LLM с использованием моделей HuggingFace, RAG-подхода, LangChain и Unstructured через LLAMA_CPP/VLLM. Ассистент успешно применялся для автоматизации клиентской поддержки и анализа документов.</li>
+                    <li>Создал систему динамического ценообразования с использованием интерпретируемых регрессионных моделей, что, по оценкам, позволит увеличить прибыль компании на 15%.</li>
+                    <li>Использовал Apache Airflow для разработки ETL-пайплайна, обеспечивающего актуальность данных для ML-моделей.</li>
+                    <li>Внедрил DVC для версионирования данных моделей, что значительно упростило их отслеживание и воспроизведение результатов.</li>
+                </ul>
+        
+                <h3>Data Analyst в АСК «ДиректСервис», г. Новосибирск (Сентябрь 2023 – Настоящее время), удаленно</h3>
+                <p><strong>Разработка и поддержка системы управления данными</strong></p>
+                <ul>
+                    <li>Реализовал с нуля enterprise-level Data Warehouse (DWH) на масштабах десятков терабайт данных, используя Greenplum и ClickHouse как основные хранилища.</li>
+                    <li>Автоматизировал процесс обновления витрин данных, создав комплексный пайплайн на основе Shell-скриптов и Windows Task Scheduler, что сократило время обработки данных с нескольких часов до 30 минут.</li>
+                    <li>Настроил механизм миграции данных из Greenplum/ClickHouse в PostgreSQL, обеспечив бесперебойную работу аналитических систем.</li>
+                    <li>Совместно с системными аналитиками разработал методологии мониторинга и оптимизации производительности DWH, что позволило повысить скорость выполнения запросов на 50%.</li>
+                </ul>
+        
+                <h3>ML Engineer в ООО «ColorDent», г. Москва (Июнь 2023 – Декабрь 2023), удаленно</h3>
+                <p><strong>Разработка ML-решений для стоматологической практики</strong></p>
+                <ul>
+                    <li>Разработал ML-классификатор изображений зубов для диагностики заболеваний, используя OpenCV и TensorFlow Lite. Модель достигла точности более 95% на тестовых данных.</li>
+                    <li>Интегрировал ML-модели в мобильное приложение с использованием MLflow для управления версиями моделей и DVC для версионирования данных.</li>
+                    <li>Оптимизировал производительность модели для работы на устройствах с ограниченными ресурсами, что позволило использовать ее на мобильных платформах без значительной потери качества.</li>
+                    <li>Разработал систему отслеживания метрик обучения моделей и внедрил автоматическое тестирование для обеспечения высокого качества решения.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
     <section id="gantt-chart" class="box">
         <div class="container">
@@ -487,29 +472,33 @@
                 <span class="gantt-year">2025</span>
             </div>
             <div class="gantt-container">
-                <!-- Бауманская МГТУ -->
-                <div class="gantt-item" data-start="2013" data-end="2019">
+                <div class="gantt-item" data-start="2013" data-end="2019" 
+                    data-description="Бауманская МГТУ, факультет ИУ, специальность Информационная безопасность." 
+                    data-link="https://github.com/user/bauman">
                     <div class="gantt-bar">
                         <div class="gantt-label">Бауманская МГТУ</div>
                     </div>
                 </div>
-    
-                <!-- Data Engineering Course -->
-                <div class="gantt-item" data-start="2019" data-end="2022">
+                
+                <div class="gantt-item" data-start="2019" data-end="2022" 
+                    data-description="Курс Data Engineering, освоение инструментов обработки больших данных." 
+                    data-link="https://github.com/user/data-engineering">
                     <div class="gantt-bar">
                         <div class="gantt-label">Data Engineering Course</div>
                     </div>
                 </div>
-    
-                <!-- Machine Learning Specialization -->
-                <div class="gantt-item" data-start="2021" data-end="2022">
+                
+                <div class="gantt-item" data-start="2021" data-end="2022" 
+                    data-description="Специализация по машинному обучению, работа с нейросетями и AI." 
+                    data-link="https://github.com/user/ml-course">
                     <div class="gantt-bar">
                         <div class="gantt-label">Machine Learning Specialization</div>
                     </div>
                 </div>
-    
-                <!-- Python for Data Science -->
-                <div class="gantt-item" data-start="2019" data-end="2019">
+                
+                <div class="gantt-item" data-start="2019" data-end="2019" 
+                    data-description="Курс Python для Data Science, основы программирования и анализа данных." 
+                    data-link="https://github.com/user/python-ds">
                     <div class="gantt-bar">
                         <div class="gantt-label">Python for Data Science</div>
                     </div>
