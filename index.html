@@ -11,248 +11,6 @@
             hljs.highlightAll();
         });
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-            position: relative;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-            padding-right: 60px;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        section {
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .box {
-            padding: 20px;
-            background: #fff;
-            border: #ddd 1px solid;
-        }
-        footer {
-            background: #35424a;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: calc(33.33% - 10px);
-            box-sizing: border-box;
-        }
-
-        .skill-icon {
-            width: 50%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .profile-photo {
-            float: right;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            width: 180px;
-            height: auto;
-            border-radius: 50%;
-            border: 2px solid #35424a;
-        }
-
-        .container::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .competencies {
-            margin-top: 20px;
-        }
-
-        .elementor-progress-wrapper {
-            margin-bottom: 15px;
-            background-color: #f4f4f4;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .elementor-progress-bar {
-            position: relative;
-            height: 30px;
-            line-height: 30px;
-            color: white;
-            font-size: 14px;
-            text-align: right;
-            padding-right: 10px;
-            background-color: #35427a;
-            width: 0px;
-            transition: width 1s ease-in-out;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        #gantt-chart {
-            margin: 40px 0;
-        }
-
-        .gantt-scale {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .gantt-year {
-            position: relative;
-            width: 14%;
-            text-align: center;
-        }
-
-        .gantt-container {
-            position: relative;
-            height: 200px;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .gantt-item {
-            position: relative;
-        }
-
-        .gantt-bar {
-            position: absolute;
-            height: 20px;
-            background-color: #35427a;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        .gantt-label {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            font-size: 12px;
-            color: #333;
-        }
-
-        .gantt-bar:hover::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            white-space: nowrap;
-            z-index: 10;
-            font-size: 12px;
-        }
-
-        .tooltip {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            white-space: pre-wrap;
-            max-width: 300px;
-            font-size: 12px;
-            z-index: 1000;
-            pointer-events: none; /* Чтобы тултип не перехватывал события */
-        }
-
-        @media (max-width: 768px) {
-            .skill-card {
-                width: 100%;
-            }
-            .profile-photo {
-                width: 30vw;
-            }
-            .elementor-progress-bar {
-                font-size: 12px;
-            }
-        }
-        @media (min-width: 768px) {
-            .content-wrapper {
-                display: flex;
-                gap: 20px;
-            }
-
-            #skills {
-                flex: 1;
-                max-width: 33%;
-            }
-
-            #experience {
-                flex: 2;
-            }
-        }
-        @media (max-width: 767px) {
-            .content-wrapper {
-                display: block;
-            }
-
-            #skills, #experience {
-                max-width: 100%;
-            }
-        }
-
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -323,7 +81,7 @@
                 <p>Больше всего работаю с PostgreSQL для создания баз данных, оптимизации запросов и реализации сложных бизнес-логик через хранимые процедуры и триггеры.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/464f3fa9522cb7ba6d48fcba4eb336c5e0eb61ef/img/ollama.svg" alt="LLM" data-width="35%; height: 30%;">
+                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/464f3fa9522cb7ba6d48fcba4eb336c5e0eb61ef/img/ollama.svg" alt="LLM" width="27%; height: auto;">
                 <p>Использую LLM (Qwen, Deepseek, Mistral, Perplexity, Chatgpt) в Ollama для автоматической генерации рутинного кода, документации и шаблонных решений, что значительно ускоряет процесс разработки.</p>
             </div>
         </div>
@@ -416,7 +174,7 @@
         <section id="experience" class="box">
             <div class="container">
                 <h2>Опыт работы</h2>
-                <h3>Data Engineer в Axenix, г. Санкт-Петербург (Август 2024 – Настоящее время)</h3>
+                <h3>Data Engineer в <a href="https://axenix.pro/" target="_blank">Axenix</a>, г. Санкт-Петербург (Август 2024 – Настоящее время)</h3>
                 <p><strong>Разработка ETL/ELT потоков в Airflow через YAML + JSON на фреймворке Python</strong></p>
                 <ul>
                     <li>Разработал модульную систему динамической генерации DAG'ов на основе YAML-конфигураций, что позволило сократить время настройки новых ETL-процессов на 40%.</li>
@@ -428,7 +186,7 @@
                     <li>Осуществлял эффективную коммуникацию с представителями других команд.</li>
                 </ul>
         
-                <h3>Data Scientist в Spacecode, г. Краснодар (Апрель 2024 – Август 2024), удаленно</h3>
+                <h3>Data Scientist в <a href="https://spacecode.ru/" target="_blank">Spacecode</a>, г. Краснодар (Апрель 2024 – Август 2024), удаленно</h3>
                 <p><strong>Разработка AI-решений для бизнеса</strong></p>
                 <ul>
                     <li>Разработал многофункционального ассистента на базе LLM с использованием моделей HuggingFace, RAG-подхода, LangChain и Unstructured через LLAMA_CPP/VLLM. Ассистент успешно применялся для автоматизации клиентской поддержки и анализа документов.</li>
@@ -437,7 +195,7 @@
                     <li>Внедрил DVC для версионирования данных моделей, что значительно упростило их отслеживание и воспроизведение результатов.</li>
                 </ul>
         
-                <h3>Data Analyst в АСК «ДиректСервис», г. Новосибирск (Сентябрь 2023 – Настоящее время), удаленно</h3>
+                <h3>Data Analyst в <a href="https://dirservice.ru/" target="_blank">АСК «ДиректСервис»</a>, г. Новосибирск (Сентябрь 2023 – Январь 2025), удаленно</h3>
                 <p><strong>Разработка и поддержка системы управления данными</strong></p>
                 <ul>
                     <li>Реализовал с нуля enterprise-level Data Warehouse (DWH) на масштабах десятков терабайт данных, используя Greenplum и ClickHouse как основные хранилища.</li>
@@ -460,49 +218,259 @@
 
     <section id="gantt-chart" class="box">
         <div class="container">
-            <h2>Образование и опыт</h2>
+            <h2>Образование</h2>
             <div class="gantt-scale">
                 <!-- Шкала времени -->
-                <span class="gantt-year">2013</span>
+                <span class="gantt-year">2022</span>
                 <span class="gantt-year"></span>
-                <span class="gantt-year">2018</span>
-                <span class="gantt-year">2020</span>
+                <span class="gantt-year">2023</span>
                 <span class="gantt-year"></span>
                 <span class="gantt-year">2024</span>
+                <span class="gantt-year"></span>
                 <span class="gantt-year">2025</span>
             </div>
             <div class="gantt-container">
-                <div class="gantt-item" data-start="2013" data-end="2019" 
-                    data-description="Бауманская МГТУ, факультет ИУ, специальность Информационная безопасность." 
-                    data-link="https://github.com/user/bauman">
-                    <div class="gantt-bar">
-                        <div class="gantt-label">Бауманская МГТУ</div>
-                    </div>
+                <!-- empty -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
                 </div>
-                
-                <div class="gantt-item" data-start="2019" data-end="2022" 
-                    data-description="Курс Data Engineering, освоение инструментов обработки больших данных." 
-                    data-link="https://github.com/user/data-engineering">
-                    <div class="gantt-bar">
-                        <div class="gantt-label">Data Engineering Course</div>
-                    </div>
+                <!-- ФНЦ -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" data-start="2022" data-end="2023" 
+                            data-description="Кандидат наук в ФНЦ Биоразнообразия ДВО РАН. Специальность - экология. Глубокий анализ данных, статистика, математическое моделирование экологических процессов с использование пространственных и временных рядов." 
+                            data-links='[
+                                {"title": "Список статей", "url": "https://www.biosoil.ru/Employee/irinyakov"}
+                            ]'>
+                            R, статистика, анализ данных.
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2022.2" 
+                            data-end="2023.4" 
+                            data-description="Выполняю работы в области инженерии и анализа данных. SQL, Python, R, SPSS, Statistica, Power BI, Excel и др." 
+                            data-links='[
+                                {"title": "Список заказов и отзывов", "url": "https://vsesdal.com/user/992403/denis"}
+                            ]'>
+                            Анализ данных: SQL, Python, R, SPSS, Statistica, Power BI, MS Office
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="gantt-item" data-start="2021" data-end="2022" 
-                    data-description="Специализация по машинному обучению, работа с нейросетями и AI." 
-                    data-link="https://github.com/user/ml-course">
-                    <div class="gantt-bar">
-                        <div class="gantt-label">Machine Learning Specialization</div>
-                    </div>
+
+                <!-- School 21 -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" 
+                            data-start="2023" 
+                            data-end="2025" 
+                            data-description="Основное обучение в школе 21 от СБЕР. Изучение C, C++, Bash, Git, Docker, алгоритмов и структур данных." 
+                            data-links='[
+                                {"title": "Проекты из Школы 21", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21"}
+                            ]'>
+                            Основное обучение в школе 21.
+                        </li>
+
+                        <li class="chart-bar" 
+                            data-start="2022.7" 
+                            data-end="2023" 
+                            data-description="Интенсив в школе 21. C, bash, git, Makefile, алгоритмы, структуры данных. Погружение в основы программирования и разработки." 
+                            data-links='[
+                                {"title": "Проекты интенсива Школы 21.", "url": "https://github.com/karnaksp/Educational-projects/tree/main/schpool21"}
+                            ]'>
+                            C, bash, algorithmes
+                        </li>
+                        <li class="chart-bar" data-start="2023" data-end="2024" 
+                            data-description="C/C++ проекты: написание стандартных библиотек на C, структуры данных, алгоритмы, работа с памятью, написание десктоп программ на C++ & QT: 3dViewer, Калькулятор, Тетрис и др.." 
+                            data-links='[
+                                {"title": "big decimal (C)", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/BDecimal%20(on%20C)"},
+                                {"title": "string.h с дополнениями (C)", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/StringsUP%20(on%20C)"},
+                                {"title": "C++ & QT проекты (C++)", "url": "https://www.datascienceportfol.io/karnaksp/projects/7"},
+                                {"title": "Контейнеры с дополнениями (C++)", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/Containers%20(on%20C%2B%2B)"}
+                            ]'>
+                            C, С++, Qt...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024" 
+                            data-end="2024" 
+                            data-description="Dockerfile, Makefile, Ansible, Neo4j, Python, unittest, pytest, subprocess, bs4, dotenv, scipy, plotly, grpc, sqlalchemy, asyncio, fastapi, aiogram." 
+                            data-links='[
+                                {"title": "Python интенсив.", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/Python_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B3"}
+                            ]'>
+                            Python
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.1" 
+                            data-end="2024.2" 
+                            data-description="pl/pgsql, функции, процедуры, оконные функции, подзапросы, cte, вложенные запросы, рекурсивные запросы." 
+                            data-links='[
+                                {"title": "SQL интенсив.", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/SQL_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B3"}
+                            ]'>
+                            SQL
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.3" 
+                            data-end="2024.4" 
+                            data-description="Linux, VM, Docker, CI/CD, bash, Prometeus, Grafana, Vagranfile." 
+                            data-links='[
+                                {"title": "DevOps проекты.", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/DevOps"}
+                            ]'>
+                            bash
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.5" 
+                            data-end="2024.6" 
+                            data-description="Начальное поружение в Go, структуры данных, алгоритмы." 
+                            data-links='[
+                                {"title": "DevOps проекты.", "url": "https://github.com/karnaksp/Educational-projects/tree/main/S21/Go_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B3"}
+                            ]'>
+                            Go
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="gantt-item" data-start="2019" data-end="2019" 
-                    data-description="Курс Python для Data Science, основы программирования и анализа данных." 
-                    data-link="https://github.com/user/python-ds">
-                    <div class="gantt-bar">
-                        <div class="gantt-label">Python for Data Science</div>
-                    </div>
+
+                <!-- DE -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" data-start="2023.2" data-end="2024" 
+                            data-description="Курс - аналитик данных от яндекс практикума. Python библиотеки: pandas, scipy, numpy, matplotlib, scikit-learn, plotly, sqlalchemy, sql запросы" 
+                            data-links='[ 
+                                {"title": "Аналитик данных", "url": "https://t1-academy.ru/"}
+                            ]'>
+                            Я.Практикум
+                        </li>
+                        <li class="chart-bar" data-start="2024" data-end="2024.6" 
+                            data-description="Школа дата инженера от холдинга T1 с выпускным проектом." 
+                            data-links='[ 
+                                {"title": "DE школа", "url": "https://sapiens.solutions/"}
+                            ]'>
+                            DE школа
+                        </li>
+                        <li class="chart-bar" data-start="2024.7" data-end="2024.8" 
+                            data-description="Greenplum расширенный курс. Партиционирование, дистрибуция, хэш, встроенные функции." 
+                            data-links='[ 
+                                {"title": "Greenplum DB", "url": "https://t1-academy.ru/"}
+                            ]'>
+                            Greenplum
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- Machine Learning -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" 
+                            data-start="2022.7" 
+                            data-end="2022.8" 
+                            data-description="Хакатон. Python, Jupiter, OOP, генерация фич, работа с энкодерами и векторным представлением, stellargraph, selenium." 
+                            data-links='[
+                                {"title": "MTS ML CuP", "url": "https://github.com/karnaksp/hohotones/tree/main/MTS-ML-CuP"}
+                            ]'>
+                            ML...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2023" 
+                            data-end="2023" 
+                            data-description="Хакатон. Python, Jupiter, Machine learning, CatBoost, XGBoost, LGBM, Stacking, Blending." 
+                            data-links='[
+                                {"title": "AgroCode", "url": "https://github.com/karnaksp/hohotones/tree/main/AgroCodeDS2023"}
+                            ]'>
+                            ML...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2023.1" 
+                            data-end="2023.1" 
+                            data-description="Хакатон. Python, Jupiter, генерация фич, анализ данных, визуализация." 
+                            data-links='[
+                                {"title": "Sibur Challenge", "url": "https://github.com/karnaksp/hohotones/tree/main/Sibur-Challenge"}
+                            ]'>
+                            ML...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2023.3" 
+                            data-end="2024.9" 
+                            data-description="Дата сайнс клуб. Формирвоание сообщества в стенах школы 21, проведение учебных занятий в стиле пир-ту-пир, совместное участие в хакатонах, развитие софт скиллов." 
+                            data-links='[
+                                {"title": "Проекты дата сайнс клуба", "url": "https://github.com/karnaksp/ds_club/tree/main/Projects"}
+                            ]'>
+                            DS Club в Школе 21.
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2023.5" 
+                            data-end="2023.8" 
+                            data-description="CV, OOP, deploy, tensorflow lite, classification models." 
+                            data-links='[
+                                {"title": "Проект для стартапа по компьютерному зрению", "url": "https://www.datascienceportfol.io/karnaksp/projects/6"}
+                            ]'>
+                            ColorDent
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2023.9" 
+                            data-end="2024" 
+                            data-description="Нефтекод - хакатон по инфохимии. Deep Learning, Data preprocessing, OOP, командная работа, бустинги, torch, transformers, blending, stacking." 
+                            data-links='[
+                                {"title": "Нефтекод", "url": "https://www.datascienceportfol.io/karnaksp/projects/10"}
+                            ]'>
+                            ML...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.1" 
+                            data-end="2024.7" 
+                            data-description="Данный хакатон был посвящен социально значимым проблема и наш проект занял первое место в одном из кейсов. LLM, postgresql, fastapi, мобильныая разработка, web-разработка." 
+                            data-links='[
+                                {"title": "SmartSocialHack", "url": "https://github.com/s21NameSpace/SmartSocialHack"}
+                            ]'>
+                            DS...
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2022.7" 
+                            data-end="2024" 
+                            data-description="Python, ноутбуки и классические библиотеки для работы с данными. Аизуализация данных, анализ различного рода данных, построение ml и dl моделей. " 
+                            data-links='[
+                                {"title": "Соревнования на kaggle", "url": "https://github.com/karnaksp/kaggle-competitions"}
+                            ]'>
+                            Kaggle competitions.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- bots -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" 
+                            data-start="2023" 
+                            data-end="2024.2" 
+                            data-description="Pet-проект на python и selenium, который помог мне отправить множество откликов на hh.ru." 
+                            data-links='[
+                                {"title": "HH.ru автоматизация отправки резюме", "url": "https://github.com/karnaksp/hh-automative"}
+                            ]'>
+                            Selenium, nlp, автоматизация.
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.2" 
+                            data-end="2024.5" 
+                            data-description="Telegram бот на aiogram с поддержкой асинхронности в обработке событий. Бот представляет собой игру-симуляцию обучения в школе 21. Затрагиваются принципы ООП. Оснащен документацией на GitHub Pages." 
+                            data-links='[
+                                {"title": "TG-Bot", "url": "https://github.com/karnaksp/angryverterbot"},
+                                {"title": "Документация", "url": "https://karnaksp.github.io/angryverterbot/"}
+                            ]'>
+                            TG-bot.
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2024.3" 
+                            data-end="2025" 
+                            data-description="Pet-проект на python и telegram api, бот - секретарша, которая впускает людей в мой личный канал. Бот поддерживает LLM через ollama и способен общаться. Развернут на легком сервере для впна. Оснащен так же RAG системой, в которой есть база знаний обо мне. Все это обернуть в микросервисную архитектуру в Docker." 
+                            data-links='[
+                                {"title": "Sekretutka", "url": "https://github.com/karnaksp/self-tg-approve/tree/main"}
+                            ]'>
+                            TG-bot.
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -510,14 +478,15 @@
     <section id="contact" class="box">
         <div class="container">
             <h2>Контакты</h2>
-            <p>Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/i/" target="_blank">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/karnaksp" target="_blank">GitHub Profile</a></p>
+            <p>Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a> 
+                Telegram: <a href="https:/t.me/calmeds">Денис</a></p>
+            <p><a href="https://www.datascienceportfol.io/karnaksp" target="_blank">Portfolio</a></p>
+            <p><a href="https://github.com/karnaksp" target="_blank">GitHub Profile</a></p>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Денис Ириняков</p>
+        <p>© 025 Денис Ириняков</p>
     </footer>
 </body>
 </html>
