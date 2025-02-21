@@ -19,5 +19,5 @@ class DeveloperProfile:
 
 ```
 
-Красивое резюме здесь --> https://karnaksp.github.io/karnaksp/ 
-Резюме, которое можно скачать, здесь --> 
+Красивое резюме здесь --> [Сайт](https://karnaksp.github.io/karnaksp/ )
+Резюме, которое можно скачать, здесь --> [Denis_Irinyakov_Res.docx](https://github.com/karnaksp/karnaksp)
