@@ -17,8 +17,7 @@ class DeveloperProfile:
                f"working with {', '.join(self.key_skills['data_tools'])}, and skilled in {', '.join(self.key_skills['development'])}. " \
                f"Strong in {', '.join(self.key_skills['soft_skills'])}."
 
-myProfile = DeveloperProfile()
-print(myProfile.summary())
 ```
 
-Расширенное резюме здесь -> https://karnaksp.github.io/karnaksp/ 
+Красивое резюме здесь --> https://karnaksp.github.io/karnaksp/ 
+Резюме, которое можно скачать, здесь --> 

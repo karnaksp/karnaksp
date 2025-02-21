@@ -13,6 +13,8 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <script>hljs.highlightAll();</script>
     <script src="script.js" defer></script>
 </head>
@@ -25,9 +27,8 @@
             <nav>
                 <ul>
                     <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#skills">Навыки</a></li>
                     <li><a href="#experience">Опыт</a></li>
-                    <li><a href="#education">Образование</a></li>
+                    <li><a href="#gantt-chart">Образование</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
@@ -40,7 +41,7 @@
         <div class="container">
             <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/photo/p2.jpg" alt="Фото" class="profile-photo">
             <h2>Middle Data Developer</h2>
-            <p>Прогрессирующий разработчик в области работы с данными. Сосредоточен на улучшении навыков работы дата инженера и развитии софт-скиллов. Влюблен в код и мечтаю о команде разработчиков с горящими глазами.</p>
+            <p>Прогрессирующий разработчик в области работы с данными. Сосредоточен на улучшении навыков разработчика в области данных и развитии софт-скиллов. Влюблен в код и мечтаю о команде разработчиков с горящими глазами.</p>
             <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
         </div>
     </section>
@@ -89,7 +90,7 @@
         <div class="content-wrapper">
         <section id="skills" class="box">
             <div class="container">
-                <h2>Уровень владения</h2>
+                <h2>Hard skills</h2>
                 <div class="competencies">
                     <div class="elementor-progress-wrapper">
                         <div class="elementor-progress-bar" data-width="90%" 
@@ -169,6 +170,78 @@
                         </div>
                     </div>
                 </div>
+                <h2>Soft skills</h2>
+                <div class="competencies soft-skills-section">
+                    <div class="elementor-progress-wrapper">
+                        <div class="elementor-progress-bar" data-width="85%" 
+                            data-tooltip="Логическое написание потоков данных со всевозможными преобразованиями.">
+                            <span class="elementor-progress-text">Командная работа</span>
+                        </div>
+                    </div>                
+
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="80%"  data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, MySQL, SQLite, Neo4j, ChromaDB.">
+                            <span class="elementor-progress-text">Критическое мышление</span>
+                        </div>
+                    </div>
+        
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="80%"  data-tooltip="Стандартный SQL и процедурный SQL + Pl/pgSQL.">
+                            <span class="elementor-progress-text">Адаптивность</span>
+                        </div>
+                    </div>
+
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="73%"  data-tooltip="Написание .Dockerfile в микросервисной архитектуре, сборка через docker compose / Vagranfile, оркестрация в docker swarm, мониторинг на Prometheus. Настройка сетей на виртуальных машинах.">
+                            <span class="elementor-progress-text">Лидерство</span>
+                        </div>
+                    </div>
+
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="55%"  data-tooltip="Написание .Dockerfile в микросервисной архитектуре, сборка через docker compose / Vagranfile, оркестрация в docker swarm, мониторинг на Prometheus. Настройка сетей на виртуальных машинах.">
+                            <span class="elementor-progress-text">Коммуникабельность</span>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    /* Изменение цвета прогресс-бара только в этом разделе */
+                    .soft-skills-section .elementor-progress-bar {
+                        background-color: #3d9c40; /* Зеленый цвет */
+                    }
+                </style>
+                <h2>Business skills</h2>
+                <div class="competencies business-section">
+                    <div class="elementor-progress-wrapper">
+                        <div class="elementor-progress-bar" data-width="80%" 
+                            data-tooltip="Логическое написание потоков данных со всевозможными преобразованиями.">
+                            <span class="elementor-progress-text">Инновационное мышление</span>
+                        </div>
+                    </div>                
+
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="80%"  data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, MySQL, SQLite, Neo4j, ChromaDB.">
+                            <span class="elementor-progress-text">Качество данных</span>
+                        </div>
+                    </div>
+        
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="70%"  data-tooltip="Стандартный SQL и процедурный SQL + Pl/pgSQL.">
+                            <span class="elementor-progress-text">ИБ</span>
+                        </div>
+                    </div>
+
+                    <div class="elementor-progress-wrapper progress-success">
+                        <div class="elementor-progress-bar" data-width="65%"  data-tooltip="Написание .Dockerfile в микросервисной архитектуре, сборка через docker compose / Vagranfile, оркестрация в docker swarm, мониторинг на Prometheus. Настройка сетей на виртуальных машинах.">
+                            <span class="elementor-progress-text">Документация</span>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    /* Изменение цвета прогресс-бара только в этом разделе */
+                    .business-section .elementor-progress-bar {
+                        background-color: #f56e1b; /* Зеленый цвет */
+                    }
+                </style>
             </div>
         </section>
         <section id="experience" class="box">
@@ -218,7 +291,7 @@
 
     <section id="gantt-chart" class="box">
         <div class="container">
-            <h2>Образование</h2>
+            <h2>Образование и полученные навыки.</h2>
             <div class="gantt-scale">
                 <!-- Шкала времени -->
                 <span class="gantt-year">2022</span>
@@ -233,28 +306,6 @@
                 <!-- empty -->
                 <div class="chart-row">
                     <div class="chart-row-item"></div>
-                </div>
-                <!-- ФНЦ -->
-                <div class="chart-row">
-                    <div class="chart-row-item"></div>
-                    <ul class="chart-row-bars">
-                        <li class="chart-bar" data-start="2022" data-end="2023" 
-                            data-description="Кандидат наук в ФНЦ Биоразнообразия ДВО РАН. Специальность - экология. Глубокий анализ данных, статистика, математическое моделирование экологических процессов с использование пространственных и временных рядов." 
-                            data-links='[
-                                {"title": "Список статей", "url": "https://www.biosoil.ru/Employee/irinyakov"}
-                            ]'>
-                            R, статистика, анализ данных.
-                        </li>
-                        <li class="chart-bar" 
-                            data-start="2022.2" 
-                            data-end="2023.4" 
-                            data-description="Выполняю работы в области инженерии и анализа данных. SQL, Python, R, SPSS, Statistica, Power BI, Excel и др." 
-                            data-links='[
-                                {"title": "Список заказов и отзывов", "url": "https://vsesdal.com/user/992403/denis"}
-                            ]'>
-                            Анализ данных: SQL, Python, R, SPSS, Statistica, Power BI, MS Office
-                        </li>
-                    </ul>
                 </div>
 
                 <!-- School 21 -->
@@ -471,6 +522,29 @@
                     </ul>
                 </div>
 
+                <!-- ФНЦ -->
+                <div class="chart-row">
+                    <div class="chart-row-item"></div>
+                    <ul class="chart-row-bars">
+                        <li class="chart-bar" data-start="2022" data-end="2023" 
+                            data-description="Кандидат наук в ФНЦ Биоразнообразия ДВО РАН. Специальность - экология. Глубокий анализ данных, статистика, математическое моделирование экологических процессов с использование пространственных и временных рядов." 
+                            data-links='[
+                                {"title": "Список статей", "url": "https://www.biosoil.ru/Employee/irinyakov"}
+                            ]'>
+                            R, статистика, анализ данных.
+                        </li>
+                        <li class="chart-bar" 
+                            data-start="2022.2" 
+                            data-end="2023.4" 
+                            data-description="Выполняю работы в области инженерии и анализа данных. SQL, Python, R, SPSS, Statistica, Power BI, Excel и др." 
+                            data-links='[
+                                {"title": "Список заказов и отзывов", "url": "https://vsesdal.com/user/992403/denis"}
+                            ]'>
+                            Анализ данных: SQL, Python, R, SPSS, Statistica, Power BI, MS Office
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -478,15 +552,18 @@
     <section id="contact" class="box">
         <div class="container">
             <h2>Контакты</h2>
-            <p>Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a> 
-                Telegram: <a href="https:/t.me/calmeds">Денис</a></p>
-            <p><a href="https://www.datascienceportfol.io/karnaksp" target="_blank">Portfolio</a></p>
-            <p><a href="https://github.com/karnaksp" target="_blank">GitHub Profile</a></p>
+            <p>
+                <i class="fas fa-envelope"></i> Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a> 
+                <i class="fab fa-telegram"></i>      Telegram: <a href="https://t.me/calmeds">Денис</a>
+                <i class="fas fa-briefcase"></i> <a href="https://www.datascienceportfol.io/karnaksp" target="_blank">Portfolio</a>
+                <i class="fab fa-github"></i> <a href="https://github.com/karnaksp" target="_blank">GitHub Profile</a>
+            </p>
         </div>
     </section>
+    
 
     <footer>
-        <p>© 025 Денис Ириняков</p>
+        <p>© 2025 Денис Ириняков</p>
     </footer>
 </body>
 </html>
