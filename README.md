@@ -29,7 +29,7 @@ print(profile.summary())
 ```
 
 > ### [Резюме](https://karnaksp.github.io/karnaksp/ )
-> *Подробно с ссылками на портфолио.*
+> *Подробно со ссылками на портфолио.*
 
 
 Так же можно скачать резюме в .docx --> [Denis_Irinyakov_Res.docx](https://github.com/karnaksp/karnaksp/blob/main/Denis_Irinyakov_Res.docx)
