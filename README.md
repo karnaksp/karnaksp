@@ -32,4 +32,4 @@ print(profile.summary())
 > *Подробно со ссылками на портфолио.*
 
 
-Так же можно скачать резюме в .docx --> [Denis_Irinyakov_Res.docx](https://github.com/karnaksp/karnaksp/blob/main/Denis_Irinyakov_Res.docx)
+Так же можно скачать резюме в .docx --> [Denis_Irinyakov_Res](https://github.com/karnaksp/karnaksp/blob/main/Irinyako_Denis.pdf)
