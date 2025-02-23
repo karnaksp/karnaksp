@@ -6,16 +6,24 @@ class DeveloperProfile:
         self.email = "irinyakov2016@yandex.ru"
         self.name = "Denis"
         self.key_skills = {
-            "programming_languages": ["Python", "SQL", "PL/pgSQL", "Bash", "Go"],
+            "languages": ["Python", "SQL", "PL/pgSQL", "Bash", "C/C++", "Go"],
             "data_tools": ["Greenplum", "PostgreSQL", "ClickHouse", "Apache Kafka", "Apache Airflow"],
             "development": ["ETL/ELT", "Docker", "Data Vault 2.0", "ML", "Data Analysis"],
-            "soft_skills": ["Team Communication", "Problem Solving"]
+            "data_science": ["Pandas", "NumPy", "Plotly", "Scikit-learn", "TensorFlow", "PyTorch"],
+            "statistics": ["Hypothesis Testing", "Data Visualization", "Predictive Analytics"]
         }
-    
+        self.hobbies = ["Snowboarding", "Ecology & Biology Research", "Scientific Exploration"]
+
     def summary(self):
-        return f"{self.role} with expertise in {', '.join(self.key_skills['programming_languages'])}, " \
-               f"working with {', '.join(self.key_skills['data_tools'])}, and skilled in {', '.join(self.key_skills['development'])}. " \
-               f"Strong in {', '.join(self.key_skills['soft_skills'])}."
+        return (f"{self.role} with expertise in {', '.join(self.key_skills['languages'])}, "
+                f"working with {', '.join(self.key_skills['data_tools'])}, and skilled in {', '.join(self.key_skills['development'])}. "
+                f"Proficient in Data Science tools such as {', '.join(self.key_skills['data_science'])}, "
+                f"and experienced in statistical methods like {', '.join(self.key_skills['statistics'])}. "
+                f"Soft skills include {', '.join(self.key_skills['soft_skills'])}. "
+                f"In my free time, I enjoy {', '.join(self.hobbies)}.")
+
+profile = DeveloperProfile()
+print(profile.summary())
 
 ```
 
