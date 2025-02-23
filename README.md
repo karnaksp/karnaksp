@@ -16,7 +16,8 @@ class DeveloperProfile:
 
     def summary(self):
         return (f"{self.role} with expertise in {', '.join(self.key_skills['languages'])}, "
-                f"working with {', '.join(self.key_skills['data_tools'])}, and skilled in {', '.join(self.key_skills['development'])}. "
+                f"working with {', '.join(self.key_skills['data_tools'])}, " 
+                f"and skilled in {', '.join(self.key_skills['development'])}. "
                 f"Proficient in Data Science tools such as {', '.join(self.key_skills['data_science'])}, "
                 f"and experienced in statistical methods like {', '.join(self.key_skills['statistics'])}. "
                 f"Soft skills include {', '.join(self.key_skills['soft_skills'])}. "
