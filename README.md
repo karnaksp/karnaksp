@@ -28,5 +28,8 @@ print(profile.summary())
 
 ```
 
-Красивое резюме здесь --> [Сайт](https://karnaksp.github.io/karnaksp/ )
-Резюме, которое можно скачать, здесь --> [Denis_Irinyakov_Res.docx](https://github.com/karnaksp/karnaksp/blob/main/Denis_Irinyakov_Res.docx)
+> ### [Резюме](https://karnaksp.github.io/karnaksp/ )
+> *Подробно с ссылками на портфолио.*
+
+
+Так же можно скачать резюме в .docx --> [Denis_Irinyakov_Res.docx](https://github.com/karnaksp/karnaksp/blob/main/Denis_Irinyakov_Res.docx)
