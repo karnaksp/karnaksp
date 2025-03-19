@@ -6,25 +6,32 @@ class DeveloperProfile:
         self.email = "irinyakov2016@yandex.ru"
         self.name = "Denis"
         self.key_skills = {
-            "languages": ["Python", "SQL", "PL/pgSQL", "Bash", "C/C++", "Go"],
-            "data_tools": ["Greenplum", "PostgreSQL", "ClickHouse", "Apache Kafka", "Apache Airflow"],
-            "development": ["ETL/ELT", "Docker", "Data Vault 2.0", "ML", "Data Analysis"],
+            "languages": ["Python", "R", "SQL", "PL/pgSQL", "Bash", "C/C++", "Go"],
+            "big_data_tools": ["Greenplum", "Hadoop", "PostgreSQL", "ClickHouse"],
+            "data_tools": ["Apache Kafka", "Apache Airflow", "Apache Spark", "Redis"],
+            "devops_tools": ["VMBox", "Docker", "Nets", "Ansible", "Vagrant"],
+            "ci/cd_tools": ["Jenkins", "GitHub Actions", "Gitlab Runner"],
+            "development": ["ETL/ELT", "Data Vault 2.0", "ML", "Data Analysis", "Web Backend", "Desktop", "Microservices", "API"],
             "data_science": ["Pandas", "NumPy", "Plotly", "Scikit-learn", "TensorFlow", "PyTorch"],
-            "statistics": ["Hypothesis Testing", "Data Visualization", "Predictive Analytics"]
+            "statistics": ["Hypothesis Testing", "Data Visualization", "Forecasting", "Parametric/Non-Parametric"
+                            "Discriminant Analysis", "Cluster Analysis", "Correlation Analysis", 
+                            "Stochastic Processes", "Bootstrap Methods", "Time Series Analysis"
+                            ]
         }
         self.hobbies = ["Snowboarding", "Ecology & Biology Research", "Scientific Exploration"]
 
     def summary(self):
-        return (f"{self.role} with expertise in {', '.join(self.key_skills['languages'])}, "
-                f"working with {', '.join(self.key_skills['data_tools'])}, " 
-                f"and skilled in {', '.join(self.key_skills['development'])}. "
-                f"Proficient in Data Science tools such as {', '.join(self.key_skills['data_science'])}, "
-                f"and experienced in statistical methods like {', '.join(self.key_skills['statistics'])}. "
-                f"Soft skills include {', '.join(self.key_skills['soft_skills'])}. "
-                f"In my free time, I enjoy {', '.join(self.hobbies)}.")
-
-profile = DeveloperProfile()
-print(profile.summary())
+        return (
+            f"{self.role} with expertise in programming languages such as {', '.join(self.key_skills['languages'])}. "
+            f"Experienced in working with big data tools like {', '.join(self.key_skills['big_data_tools'])}, "
+            f"data processing tools including {', '.join(self.key_skills['data_tools'])}, "
+            f"and DevOps tools such as {', '.join(self.key_skills['devops_tools'])}. "
+            f"Skilled in CI/CD pipelines using {', '.join(self.key_skills['ci/cd_tools'])}. "
+            f"Proficient in development areas such as {', '.join(self.key_skills['development'])}. "
+            f"Familiar with data science libraries like {', '.join(self.key_skills['data_science'])}, "
+            f"and experienced in statistical methods including {', '.join(self.key_skills['statistics'])}. "
+            f"In my free time, I enjoy {', '.join(self.hobbies)}."
+        )
 
 ```
 
