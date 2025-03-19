@@ -11,11 +11,7 @@ class DeveloperProfile:
             "devops_tools": ["VMBox", "Docker", "Nets", "Ansible", "Vagrant"],
             "ci/cd_tools": ["Jenkins", "GitHub Actions", "Gitlab Runner"],
             "development": ["ETL/ELT", "Data Analysis", "Backend", "Desktop", "API"],
-            "data_science": ["Pandas", "NumPy", "Plotly", "Scikit-learn", "TensorFlow", "PyTorch"],
-            "statistics": ["Hypothesis Testing", "Data Visualization", "Forecasting", "Parametric/Non-Parametric"
-                            "Discriminant Analysis", "Cluster Analysis", "Correlation Analysis", 
-                            "Stochastic Processes", "Bootstrap Methods", "Time Series Analysis"
-                            ]
+            "data_science": ["Pandas", "NumPy", "Plotly", "Scikit-learn", "TensorFlow", "PyTorch"]
         }
         self.hobbies = ["Snowboarding", "Ecology & Biology Research", "Scientific Exploration"]
 
