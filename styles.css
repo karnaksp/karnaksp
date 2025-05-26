@@ -268,6 +268,8 @@ section.visible {
   height: auto;
   margin-bottom: 20px;
   transition: all var(--transition-normal);
+  max-width: 200px;
+  min-width: 120px;
 }
 
 .skill-card:hover .skill-icon {
@@ -553,6 +555,18 @@ section.visible {
     grid-template-columns: 1fr;
   }
   
+  .skill-card {
+    padding: 15px;
+  }
+  
+  .skill-icon {
+    width: auto;
+    max-width: 150px;
+    min-width: 100px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+  
   .profile-photo {
     width: 150px;
     height: 150px;
@@ -621,6 +635,7 @@ section.visible {
   animation: fadeIn var(--transition-slow) forwards;
 }
 
+/* Подвал */
 footer {
   background: linear-gradient(135deg, var(--primary-dark) 0%, #1e2a33 100%);
   color: var(--text-light);

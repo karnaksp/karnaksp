@@ -95,7 +95,6 @@ function initChartBars() {
         
         observer.observe(bar);
 
-        // Создаём тултип
         const tooltip = document.createElement("div");
         tooltip.className = "tooltip";
         tooltip.style.display = "none";
