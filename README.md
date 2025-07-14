@@ -4,4 +4,4 @@
 > *Подробно со ссылками на портфолио.*
 
 
-Так же можно скачать резюме в .docx --> [Denis_Irinyakov_Res](https://github.com/karnaksp/karnaksp/blob/main/Irinyakov_Denis.pdf)
+Так же можно скачать резюме в pdf --> [Denis_Irinyakov_Res](https://github.com/karnaksp/karnaksp/blob/main/Irinyakov_Denis.pdf)
