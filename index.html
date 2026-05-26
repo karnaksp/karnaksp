@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Денис Ириняков</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="concepts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" defer></script>
     <script defer>
@@ -17,6 +19,7 @@
     
     <script>hljs.highlightAll();</script>
     <script src="script.js" defer></script>
+    <script src="concepts.js" defer></script>
 </head>
 <body>
     <header>
@@ -39,7 +42,7 @@
 
     <section id="about" class="box">
         <div class="container">
-            <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/photo/p1.png" alt="Фото" class="profile-photo">
+            <img src="photo/p1-transparent.png" alt="Фото" class="profile-photo">
             <h2>Middle Data Engineer</h2>
             <p>Опытный инженер данных с глубокими знаниями в проектировании и разработке ETL/ELT-систем. Специализируюсь на создании эффективных решений для обработки, анализа и визуализации больших объемов данных с использованием современных технологий и методологий. Ориентирован на оптимизацию процессов, повышение производительности и обеспечение высокого качества данных. Имею бэкграунд data science и аналитики, что позволяет эффективно использовать AI-инструменты. Стремлюсь работать в инновационной команде профессионалов, где могу применить свой опыт для решения сложных технических задач и достижения амбициозных целей.</p>
             <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
@@ -50,40 +53,40 @@
         <h2>Любимые инструменты</h2>
         <div class="skills-container">
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/greenplum.svg" alt="Greenplum" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/greenplum.svg" alt="Greenplum" class="skill-icon"></span>
                 <p>Работаю с Greenplum для проектирования высоконагруженных аналитических систем. Разрабатываю оптимизированные схемы данных, высокопроизводительные хранимые процедуры и функции на PL/pgSQL. Применяю техники партиционирования, индексации и параллельной обработки. Использую методологии Anchor и Data Vault для создания масштабируемых и гибких баз данных.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/python.svg" alt="Python" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/python.svg" alt="Python" class="skill-icon"></span>
                 <p>Использую Python для разработки и анализа данных: от высоконагруженных ETL-пайплайнов и масштабируемых веб-сервисов до продвинутых ML-моделей и интерактивных визуализаций. Создаю эффективный код с использованием asyncio, многопоточности и оптимизации узких мест. Разрабатываю модульные, тестируемые решения с применением современных фреймворков и библиотек (FastAPI, SQLAlchemy, Pandas, Scikit-learn, Plotly и т.д.). Автоматизирую бизнес-процессы через интеграционные решения, включая Telegram-ботов и системы с графическим интерфейсом на PyQt.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/bash.svg" alt="Shell" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/bash.svg" alt="Shell" class="skill-icon"></span>
                 <p>Написал множество скриптов на Bash и PowerShell для автоматизации процессов. Использую эти инструменты для управления файловой системой, git, управления процессами, создания резервных копий и мониторинга серверов. Работаю с cron и Windows Task Scheduler для планирования задач. Очень полезны, когда правила безопасности не допускают другого софта.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/docker.svg" alt="Docker" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/docker.svg" alt="Docker" class="skill-icon"></span>
                 <p>Применяю Docker для контейнеризации приложений. Постоянно пишу Dockerfile для разных проектов, используя многоэтапные сборки для минимизации размера образов, docker-compose для оркестрации контейнеров и CI/CD пайплайны с помощью GitHub Actions и GitLab Runner.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/kafka.svg" alt="Kafka" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/kafka.svg" alt="Kafka" class="skill-icon"></span>
                 <p>Использовал Apache Kafka для обработки потоковых данных и влюбился в этого брокера. Kafka Streams для преобразования данных, разделение тем на партиции для повышения производительности.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/airflow.svg" alt="Apache Airflow" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/airflow.svg" alt="Apache Airflow" class="skill-icon"></span>
                 <p>Работаю с Apache Airflow для создания надежных систем оркестрации данных. Разработал масштабируемый подход для автоматической генерации DAG'ов из декларативных YAML-конфигураций, что позволило сократить время разработки на 40% и минимизировать ошибки. Реализовал систему динамической генерации задач на основе метаданных, обеспечивающую адаптивность пайплайнов к изменениям в структуре данных.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/Selenium.svg" alt="Selenium" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/Selenium.svg" alt="Selenium" class="skill-icon"></span>
                 <p>Использую Selenium для автоматизации взаимодействия с веб-браузерами. Разрабатываю скрипты для парсинга данных с динамически генерируемых сайтов, тестирования пользовательских сценариев и автоматизации рутинных действий в браузере.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/postgresql.svg" alt="PostgreSQL" class="skill-icon">
+                <span class="skill-logo-frame"><img src="img/logos/postgresql.svg" alt="PostgreSQL" class="skill-icon"></span>
                 <p>Больше всего работаю с PostgreSQL для создания баз данных, оптимизации запросов и реализации сложных бизнес-логик через хранимые процедуры и триггеры.</p>
             </div>
             <div class="skill-card">
-                <img src="https://raw.githubusercontent.com/karnaksp/karnaksp/refs/heads/main/img/logos/openai.svg" alt="LLM" width="27%; height: auto;">
-                <p>Использую LLM и агентоы для автоматизации простых задач и генерации кода, что значительно ускоряет прцоесс работы. Работал с Ollama, Huggingface, n8n, подключал MCP серверы. Использую в качестве ассистентов Cursor, Lingma, Windsuf</p>
+                <span class="skill-logo-frame"><img src="img/logos/claude.svg" alt="Claude" class="skill-icon"></span>
+                <p>Использую LLM и AI-агентов для автоматизации рабочих задач, генерации кода, анализа документов и ускорения разработки. Работаю с Claude от Anthropic, Codex, Cursor, Ollama, Hugging Face, n8n и MCP-серверами, собираю агентные сценарии под разработку, поиск решений и поддержку data-пайплайнов.</p>
             </div>
         </div>
         </section>

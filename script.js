@@ -11,25 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initProgressBars() {
     const progressBars = document.querySelectorAll(".elementor-progress-bar");
+    const progressGroups = document.querySelectorAll(".competencies");
 
-    const observer = new IntersectionObserver((entries) => {
+    function animateBar(progressBar) {
+        if (progressBar.dataset.animated === "true") {
+            return;
+        }
+
+        const targetWidth = progressBar.getAttribute("data-width");
+        progressBar.dataset.animated = "true";
+
+        setTimeout(() => {
+            progressBar.style.width = targetWidth;
+        }, 200);
+    }
+
+    const groupObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const progressBar = entry.target;
-                const targetWidth = progressBar.getAttribute("data-width");
-                
-                setTimeout(() => {
-                    progressBar.style.width = targetWidth;
-                }, 200);
-
-                observer.unobserve(progressBar);
+                entry.target.querySelectorAll(".elementor-progress-bar").forEach(animateBar);
+                groupObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 });
+    }, { rootMargin: "160px 0px", threshold: 0.05 });
 
     progressBars.forEach((bar) => {
-        observer.observe(bar);
-
         const tooltip = document.createElement("div");
         tooltip.className = "tooltip";
         tooltip.innerText = bar.getAttribute("data-tooltip") || "";
@@ -65,10 +71,25 @@ function initProgressBars() {
             }, 200);
         });
     });
+
+    progressGroups.forEach((group) => {
+        groupObserver.observe(group);
+    });
 }
 
 function initChartBars() {
-    const chartBars = document.querySelectorAll(".chart-bar");
+    const chartBars = Array.from(document.querySelectorAll(".chart-bar"));
+    const timelineStart = 2022;
+    const timelineEnd = Math.max(
+        2025.35,
+        ...chartBars.map((bar) => parseFloat(bar.getAttribute("data-end")) || timelineStart)
+    );
+    const totalColumns = Math.max(40, Math.ceil((timelineEnd - timelineStart) * 12));
+
+    document.documentElement.style.setProperty("--gantt-columns", totalColumns);
+    document.querySelectorAll(".chart-row-bars").forEach((row) => {
+        row.style.setProperty("--gantt-columns", totalColumns);
+    });
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -83,15 +104,20 @@ function initChartBars() {
         const startYear = parseFloat(bar.getAttribute("data-start"));
         const endYear = parseFloat(bar.getAttribute("data-end"));
 
-        // Рассчитываем ширину и позицию бара
-        const containerWidth = document.querySelector(".gantt-container").offsetWidth;
-        const yearRange = 2025 - 2022; // Диапазон лет
-        const barWidth = ((endYear - startYear) / yearRange) * containerWidth;
-        const offsetLeft = ((startYear - 2022) / yearRange) * containerWidth;
+        const safeStart = Number.isFinite(startYear) ? startYear : timelineStart;
+        const safeEnd = Number.isFinite(endYear) && endYear > safeStart
+            ? endYear
+            : safeStart + (1 / 12);
+        const startRatio = (safeStart - timelineStart) / (timelineEnd - timelineStart);
+        const endRatio = (safeEnd - timelineStart) / (timelineEnd - timelineStart);
+        const startColumn = Math.max(1, Math.min(totalColumns, Math.floor(startRatio * totalColumns) + 1));
+        const endColumn = Math.max(
+            startColumn + 2,
+            Math.min(totalColumns + 1, Math.ceil(endRatio * totalColumns) + 1)
+        );
 
-        // Устанавливаем стили
-        bar.style.gridColumnStart = Math.ceil(offsetLeft / (containerWidth / 12)) + 1;
-        bar.style.gridColumnEnd = Math.ceil((offsetLeft + barWidth) / (containerWidth / 12)) + 1;
+        bar.style.gridColumnStart = startColumn;
+        bar.style.gridColumnEnd = endColumn;
         
         observer.observe(bar);
 
