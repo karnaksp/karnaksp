@@ -7,11 +7,12 @@ class DataDeveloperProfile(Developer):
         self.name = "Denis"
         self.hard_skills = {
             "languages": ["Python", "R", "SQL", "PL/pgSQL", "Shell", "C/C++", "Go", "Ruby"],
-            "big_data_tools": ["Greenplum", "Hadoop", "ClickHouse", "PostgreSQL"],
-            "etl/elt": ["Kafka", "Redis", "Airflow", "Spark", "dbt"],
+            "favorite_tools": ["ClickHouse", "OpenMetadata", "dbt", "Airflow", "PostgreSQL", "Docker", "GitLab"],
+            "big_data_tools": ["Greenplum", "Hadoop", "ClickHouse", "PostgreSQL", "OpenMetadata"],
+            "etl/elt": ["Kafka", "Redis", "Airflow", "Spark", "dbt", "dlt", "PeerDB"],
             "devops_tools": ["VMBox", "Docker", "Consul", "Ansible", "Vagrant", "Grafana"],
             "ci/cd_tools": ["Jenkins", "Github Actions", "Gitlab Runner"],
-            "development": ["ETL/ELT", "DA", "DS", "ML", "Backend", "Desktop", "API"],
+            "development": ["ETL/ELT", "Data Catalog", "Data Quality", "DA", "DS", "ML", "Backend", "Desktop", "API"],
             "data_science": ["Pandas", "NumPy", "Plotly", "Scikit-learn", "TensorFlow", "PyTorch"],
             "llm_tools": ["Cursor", "n8n", "MCP", "Ollama", "vllm"]
         }

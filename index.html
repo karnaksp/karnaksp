@@ -44,7 +44,7 @@
         <div class="container">
             <img src="photo/p1-transparent.png" alt="Фото" class="profile-photo">
             <h2>Middle Data Engineer</h2>
-            <p>Опытный инженер данных с глубокими знаниями в проектировании и разработке ETL/ELT-систем. Специализируюсь на создании эффективных решений для обработки, анализа и визуализации больших объемов данных с использованием современных технологий и методологий. Ориентирован на оптимизацию процессов, повышение производительности и обеспечение высокого качества данных. Имею бэкграунд data science и аналитики, что позволяет эффективно использовать AI-инструменты. Стремлюсь работать в инновационной команде профессионалов, где могу применить свой опыт для решения сложных технических задач и достижения амбициозных целей.</p>
+            <p>Инженер данных с опытом в программной разработке, анализе данных и машинном обучении. Работаю на стыке BI и ML: проектирую витрины и ETL/ELT-пайплайны, развиваю data catalog, строю инженерные контуры для AI-продуктов и обеспечиваю качество данных в modern data stack. Сильные стороны: системная инженерия данных, глубокое погружение в бизнес-домен, автоматизация рутинных процессов, документация и доведение решений до production-эксплуатации.</p>
             <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
         </div>
     </section>
@@ -55,6 +55,18 @@
             <div class="skill-card">
                 <span class="skill-logo-frame"><img src="img/logos/greenplum.svg" alt="Greenplum" class="skill-icon"></span>
                 <p>Работаю с Greenplum для проектирования высоконагруженных аналитических систем. Разрабатываю оптимизированные схемы данных, высокопроизводительные хранимые процедуры и функции на PL/pgSQL. Применяю техники партиционирования, индексации и параллельной обработки. Использую методологии Anchor и Data Vault для создания масштабируемых и гибких баз данных.</p>
+            </div>
+            <div class="skill-card">
+                <span class="skill-logo-frame"><img src="img/logos/clickhouse.svg" alt="ClickHouse" class="skill-icon"></span>
+                <p>Использую ClickHouse как основную аналитическую СУБД для витрин, быстрых ad-hoc запросов, мониторинга качества данных и подготовки слоев для BI/ML. Проектирую таблицы, инкрементальные загрузки, SQL-проверки и производительные пайплайны вокруг колоночного хранения.</p>
+            </div>
+            <div class="skill-card">
+                <span class="skill-logo-frame"><img src="img/logos/openmetadata.svg" alt="OpenMetadata" class="skill-icon"></span>
+                <p>Развиваю data catalog и metadata governance: табличные контракты, семантический слой, теги, FQN-реестры, проверки покрытия и процессы синхронизации метаданных. Использую каталог как инструмент прозрачности данных для BI, ML и продуктовых команд.</p>
+            </div>
+            <div class="skill-card">
+                <span class="skill-logo-frame"><img src="img/logos/dbt.svg" alt="dbt" class="skill-icon"></span>
+                <p>Использую dbt-подход для декларативного описания трансформаций, документирования моделей, проверки качества данных и воспроизводимой сборки аналитических слоев. Ценю dbt за прозрачный lineage, тесты и близость к инженерным практикам разработки.</p>
             </div>
             <div class="skill-card">
                 <span class="skill-logo-frame"><img src="img/logos/python.svg" alt="Python" class="skill-icon"></span>
@@ -97,13 +109,13 @@
                 <div class="competencies">
                     <div class="elementor-progress-wrapper">
                         <div class="elementor-progress-bar" data-width="90%" 
-                            data-tooltip="Логическое написание потоков данных со всевозможными преобразованиями.">
+                            data-tooltip="Проектирование регулярных и инкрементальных загрузок, обновление витрин, интеграция продуктовых и внешних источников, контроль расписаний и SLA.">
                             <span class="elementor-progress-text">ETL/ELT</span>
                         </div>
                     </div>                
 
                     <div class="elementor-progress-wrapper progress-success">
-                        <div class="elementor-progress-bar" data-width="85%"  data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, MySQL, SQLite, Neo4j, ChromaDB.">
+                        <div class="elementor-progress-bar" data-width="85%"  data-tooltip="PostgreSQL, ClickHouse, Greenplum, S3, Iceberg, Delta Lake, MySQL, SQLite, Neo4j, ChromaDB, OpenMetadata.">
                             <span class="elementor-progress-text">Хранение данных (PSQL, CH, GP)</span>
                         </div>
                     </div>
@@ -145,14 +157,14 @@
                     </div>
         
                     <div class="elementor-progress-wrapper progress-success">
-                        <div class="elementor-progress-bar" data-width="65%"  data-tooltip="Хранилище данных, озеро данных, data mesh, Data Vault, Anchor, Kimball, SCD.">
+                        <div class="elementor-progress-bar" data-width="65%"  data-tooltip="Хранилище данных, озеро данных, lakehouse, data catalog, metadata management, data contracts, semantic layer, Data Vault, Anchor, Kimball, SCD.">
                             <span class="elementor-progress-text">Архитектура БД (DWH, DL, DM)</span>
                         </div>
                     </div>
         
                     <div class="elementor-progress-wrapper progress-success">
-                        <div class="elementor-progress-bar" data-width="60%" >
-                            <span class="elementor-progress-text">Оркестрация (Apache Airflow)</span>
+                        <div class="elementor-progress-bar" data-width="60%" data-tooltip="Apache Airflow, dlt, dbt, PeerDB, FDW, pg_cron, Spark, Trino, Flink.">
+                            <span class="elementor-progress-text">Оркестрация и пайплайны</span>
                         </div>
                     </div>
 
@@ -267,7 +279,22 @@
         <section id="experience" class="box">
             <div class="container">
                 <h2>Опыт работы</h2>
-                <h3>Data Engineer в <a href="https://axenix.pro/" target="_blank">Axenix</a>, г. Санкт-Петербург (Август 2024 – Настоящее время)</h3>
+                <h3>Data Engineer в <a href="https://ddxfitness.ru/" target="_blank">DDX Fitness</a>, Россия (Октябрь 2025 – Настоящее время)</h3>
+                <p><strong>Data engineering для BI, ML и AI-продуктов</strong></p>
+                <ul>
+                    <li>Работаю на стыке BI и ML-команд: развиваю витрины, пайплайны и инженерный слой данных для аналитики, моделей и AI-продуктов.</li>
+                    <li>Оркестрирую ETL/ELT-процессы: регулярные и инкрементальные загрузки, обновление витрин, интеграцию продуктовых и внешних источников, контроль расписаний и SLA.</li>
+                    <li>Отвечаю за качество данных: проверки полноты, дубликатов и расхождений, мониторинг ключевых витрин, алертинг, разбор инцидентов и оперативные исправления.</li>
+                    <li>Развиваю data catalog и metadata governance: табличные контракты, семантический слой, теги, процессы ревью, валидации и синхронизации метаданных.</li>
+                    <li>Участвую в разработке AI-тренера: подготовка единого датасета упражнений, обогащение и нормализация данных, сопоставление источников, витрины для matcher/API и ML-задач.</li>
+                    <li>Проектирую миграции и синхронизацию данных между аналитическими и продуктовыми контурами: идемпотентные загрузки, dry-run/apply/backfill, rollback/restore и SQL-аудит результата.</li>
+                    <li>Разрабатываю внутренние сервисы и API для экспертного ревью и операционной работы с датасетами: карточки объектов, фильтры, статистика покрытия, фиксация вердиктов.</li>
+                    <li>Строю ingestion-пайплайны от API и файловых источников до аналитического слоя: инкременты, SCD2/merge, контракты типов, нормализация и подготовка сырых данных.</li>
+                    <li>Поддерживаю ML-направление: подготовка фич, inference-процессы, витрины для моделей и аналитиков, воспроизводимость расчётов.</li>
+                    <li>Оформляю инженерную документацию, runbook'и, E2E/smoke-сценарии, SQL-проверки и MR-процессы, снижая зависимость команд от ручных знаний.</li>
+                </ul>
+
+                <h3>Data Engineer в <a href="https://axenix.pro/" target="_blank">Axenix</a>, г. Санкт-Петербург (Август 2024 – Октябрь 2025)</h3>
                 <p><strong>Разработка ETL/ELT потоков в Airflow через YAML + JSON на фреймворке Python</strong></p>
                 <ul>
                     <li>Разработал модульную систему динамической генерации DAG'ов на основе YAML-конфигураций, что позволило сократить время настройки новых ETL-процессов на 40%.</li>
