@@ -34,4 +34,4 @@
 
 ## Обучение и архив
 
-Старые DS/ML notebooks, хакатоны, задания School 21 и учебные forks специально вынесены в архив. [Educational-projects](https://github.com/karnaksp/Educational-projects) — индекс практики по School 21, SQL, Python, DevOps, Linux и monitoring. Если fork или notebook repo попадает в витрину, он помечен как lab/conversion case и содержит явный раздел с моим вкладом, а не маскируется под оригинальный production-проект.
+Старые DS/ML notebooks, хакатоны, задания School 21 и учебные forks специально вынесены в архив. [Educational-projects](https://github.com/karnaksp/Educational-projects) — индекс практики по School 21, SQL, Python, DevOps, Linux и monitoring. [Retail_Analytics_s21](https://github.com/karnaksp/Retail_Analytics_s21) — отдельный secondary SQL/warehouse lab: fork учебного retail analytics задания, оформленный как воспроизводимый PostgreSQL case study с data contract, Docker smoke, materialized views и явным описанием моего вклада. Если fork или notebook repo попадает в витрину, он помечен как lab/conversion case и содержит явный раздел с моим вкладом, а не маскируется под оригинальный production-проект.
