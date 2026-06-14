@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="concepts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" defer></script>
-    <script defer>
-        document.addEventListener("DOMContentLoaded", (event) => {
-            hljs.highlightAll();
-        });
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -30,6 +23,7 @@
             <nav>
                 <ul>
                     <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#featured-projects">Проекты</a></li>
                     <li><a href="#experience">Опыт</a></li>
                     <li><a href="#gantt-chart">Образование</a></li>
                     <li><a href="#contact">Контакты</a></li>
@@ -46,6 +40,76 @@
             <h2>Data Engineer</h2>
             <p>Инженер данных с опытом в программной разработке, анализе данных и машинном обучении. Работаю на стыке BI и ML: проектирую и развиваю стек данных, ETL/ELT-пайплайны, data catalog, строю инженерные контуры для AI-продуктов и обеспечиваю качество данных. Сильные стороны: системная инженерия данных, глубокое погружение в бизнес-домен, автоматизация рутинных процессов, документация и доведение решений до production-эксплуатации.</p>
             <p><strong>Контактный email:</strong> <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a></p>
+        </div>
+    </section>
+
+    <section id="featured-projects" class="box">
+        <div class="container">
+            <h2>Featured Data Engineering Projects</h2>
+            <p class="section-lead">Главная витрина GitHub: production-проекты, прикладные data engineering case studies и один automation-проект. Каждый репозиторий оформлен так, чтобы быстро показать задачу, стек, архитектуру, запуск, проверки и мой вклад.</p>
+            <div class="featured-grid">
+                <article class="project-card project-card-production">
+                    <div class="project-card-header">
+                        <span class="project-label">Production</span>
+                        <h3>investment-signals</h3>
+                    </div>
+                    <p>Market anomaly pipeline: live ingestion, stream processing, signal storage, observability, admin cockpit and operational docs.</p>
+                    <p class="project-stack">Python · Redpanda/Kafka · ClickHouse · Postgres · FastAPI · Dagster · Prometheus · Grafana</p>
+                    <div class="project-links">
+                        <a href="https://github.com/karnaksp/investment-signals" target="_blank">Repo</a>
+                        <a href="https://karnaksp.github.io/investment-signals/" target="_blank">Docs</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card-production">
+                    <div class="project-card-header">
+                        <span class="project-label">Production</span>
+                        <h3>stock-prices</h3>
+                    </div>
+                    <p>Data product for animated market videos from stocks, futures, FX, metals and crypto data, with CLI, bot scenarios and docs.</p>
+                    <p class="project-stack">Python · Telegram Bot · CLI · Docker · MkDocs · GitHub Actions</p>
+                    <div class="project-links">
+                        <a href="https://github.com/karnaksp/stock-prices" target="_blank">Repo</a>
+                        <a href="https://karnaksp.github.io/stock-prices/" target="_blank">Docs</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-label">Automation</span>
+                        <h3>self-tg-approve</h3>
+                    </div>
+                    <p>AI automation side project: Telegram access approval bot with graph-backed memory, local LLM components and repository hygiene checks.</p>
+                    <p class="project-stack">Python · Telegram · Docker Compose · Ollama · LangChain · Neo4j</p>
+                    <div class="project-links">
+                        <a href="https://github.com/karnaksp/self-tg-approve" target="_blank">Repo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-label">Case study</span>
+                        <h3>data-forge</h3>
+                    </div>
+                    <p>Applied fork-to-case-study: retail CDC/lakehouse runbook, validation SQL, Kafka checks, analytical queries and explicit contribution framing.</p>
+                    <p class="project-stack">Kafka · Debezium · Spark · Trino · MinIO · ClickHouse · Airflow · Superset</p>
+                    <div class="project-links">
+                        <a href="https://github.com/karnaksp/data-forge" target="_blank">Repo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-label">DS-to-DE</span>
+                        <h3>Oil-code</h3>
+                    </div>
+                    <p>Notebook-to-pipeline conversion case for oil-property prediction: data contract, validation CI, batch scoring plan and monitoring report.</p>
+                    <p class="project-stack">Python · Jupyter · Data contracts · Validation CI · Batch scoring</p>
+                    <div class="project-links">
+                        <a href="https://github.com/karnaksp/Oil-code" target="_blank">Repo</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -604,7 +668,7 @@
             <p>
                 <i class="fas fa-envelope"></i> Email: <a href="mailto:irinyakov2016@yandex.ru">irinyakov2016@yandex.ru</a> 
                 <i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/calmeds">Денис</a>
-                <i class="fas fa-briefcase"></i> <a href="https://www.datascienceportfol.io/karnaksp" target="_blank">Developer Portfolio</a>
+                <i class="fas fa-briefcase"></i> <a href="https://www.datascienceportfol.io/karnaksp" target="_blank">External Portfolio</a>
                 <i class="fab fa-github"></i> <a href="https://github.com/karnaksp" target="_blank">GitHub Profile</a>
             </p>
         </div>
@@ -612,7 +676,7 @@
     
 
     <footer>
-        <p>© 2025 Денис Ириняков</p>
+        <p>© 2026 Денис Ириняков</p>
     </footer>
 </body>
 </html>

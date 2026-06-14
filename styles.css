@@ -237,6 +237,93 @@ section.visible {
   box-shadow: var(--hover-shadow);
 }
 
+/* Витрина проектов */
+.section-lead {
+  max-width: 900px;
+  margin: -8px 0 28px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 22px;
+  background: #fbfcfd;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid #3a6ba4;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--card-shadow);
+}
+
+.project-card-production {
+  border-left-color: var(--primary-accent);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.project-card p {
+  margin: 0 0 14px;
+}
+
+.project-label {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: var(--border-radius-sm);
+  background: #e9eef2;
+  color: var(--primary-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-stack {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--primary-accent);
+  border-radius: var(--border-radius-sm);
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  background: var(--primary-accent);
+  color: var(--text-light);
+  text-decoration: none;
+}
+
 /* Навыки */
 .skills-container {
   display: grid;
@@ -553,6 +640,19 @@ section.visible {
   
   .skills-container {
     grid-template-columns: 1fr;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .project-card-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
   
   .skill-card {
