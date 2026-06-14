@@ -12,7 +12,7 @@ I build production-oriented data systems: ETL/ELT pipelines, event streams, anal
 | [stock-prices](https://github.com/karnaksp/stock-prices) | Python, Telegram Bot, CLI, Docker, MkDocs, GitHub Actions | Production data product for animated market videos from stocks, futures, FX, metals, and crypto data. [Docs](https://karnaksp.github.io/stock-prices/) |
 | [self-tg-approve](https://github.com/karnaksp/self-tg-approve) | Python, Telegram, Docker Compose, Ollama, LangChain, Neo4j | AI automation side project: channel access approval bot with graph-backed memory and local LLM components. |
 | [data-forge](https://github.com/karnaksp/data-forge) | Kafka, Debezium, Spark, Trino, MinIO, ClickHouse, Airflow, Superset | Applied fork-to-case-study: retail CDC/lakehouse runbook, validation SQL, Kafka checks, analytical query examples, and explicit contribution framing. |
-| [Oil-code](https://github.com/karnaksp/Oil-code) | Python, Jupyter, data contracts, validation CI, batch scoring plan | DS-to-DE conversion case for oil-property prediction: raw data contract, stdlib data-quality gate, GitHub Actions validation, and notebook-to-pipeline plan. |
+| [Oil-code](https://github.com/karnaksp/Oil-code) | Python, Jupyter, data contracts, validation CI, deterministic batch scoring | DS-to-DE conversion case for oil-property prediction: raw data contract, stdlib data-quality gate, deterministic batch scoring artifact, GitHub Actions validation, and monitoring reports. |
 
 ## Core Stack
 
