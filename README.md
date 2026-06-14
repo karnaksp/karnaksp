@@ -11,7 +11,8 @@ I build production-oriented data systems: ETL/ELT pipelines, event streams, anal
 | [investment-signals](https://github.com/karnaksp/investment-signals) | Python, Redpanda/Kafka, ClickHouse, Postgres, FastAPI, Dagster, Prometheus, Grafana | Production market anomaly pipeline: live ingestion, stream processing, signal storage, observability, admin cockpit, and docs. [Docs](https://karnaksp.github.io/investment-signals/) |
 | [stock-prices](https://github.com/karnaksp/stock-prices) | Python, Telegram Bot, CLI, Docker, MkDocs, GitHub Actions | Production data product for animated market videos from stocks, futures, FX, metals, and crypto data. [Docs](https://karnaksp.github.io/stock-prices/) |
 | [self-tg-approve](https://github.com/karnaksp/self-tg-approve) | Python, Telegram, Docker Compose, Ollama, LangChain, Neo4j | AI automation side project: channel access approval bot with graph-backed memory and local LLM components. |
-| [data-forge](https://github.com/karnaksp/data-forge) | Kafka, Debezium, Spark, Trino, Iceberg, MinIO, ClickHouse, Airflow, Superset | Forked modern data stack playground. Next step: turn it into a documented retail CDC/lakehouse case study with explicit `My contribution`. |
+| [data-forge](https://github.com/karnaksp/data-forge) | Kafka, Debezium, Spark, Trino, MinIO, ClickHouse, Airflow, Superset | Applied fork-to-case-study: retail CDC/lakehouse runbook, validation SQL, Kafka checks, analytical query examples, and explicit contribution framing. |
+| [Oil-code](https://github.com/karnaksp/Oil-code) | Python, Jupyter, data contracts, validation CI, batch scoring plan | DS-to-DE conversion case for oil-property prediction: raw data contract, stdlib data-quality gate, GitHub Actions validation, and notebook-to-pipeline plan. |
 | [Educational-projects](https://github.com/karnaksp/Educational-projects) | SQL, Python, C/C++, DevOps, Linux, monitoring | Learning archive for School 21 and other training projects. Kept as an archive, not as the main portfolio signal. |
 
 ## Core Stack
@@ -31,4 +32,4 @@ I build production-oriented data systems: ETL/ELT pipelines, event streams, anal
 
 ## Learning And Archive
 
-Older DS/ML notebooks, hackathons, School 21 tasks, and forked learning repositories are intentionally grouped as archive material. They support the background story, while the featured projects above are the main engineering signal.
+Older DS/ML notebooks, hackathons, School 21 tasks, and forked learning repositories are intentionally grouped as archive material. When a fork or notebook repo is featured, it is labeled as a lab/conversion case and includes an explicit contribution section instead of pretending to be original production work.
