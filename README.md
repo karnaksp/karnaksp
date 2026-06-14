@@ -1,20 +1,22 @@
 # Denis Irinyakov | Data Engineer
 
-I build production-oriented data systems: ETL/ELT pipelines, event streams, analytical storage, data quality checks, metadata workflows, and Python services around data products.
+Я строю production-oriented data systems: ETL/ELT-конвейеры, event streams, аналитические хранилища, проверки качества данных, metadata workflows и Python-сервисы вокруг data products.
 
-**Links:** [CV / portfolio](https://karnaksp.github.io/karnaksp/) · [PDF resume](https://github.com/karnaksp/karnaksp/raw/main/Irinyakov_Denis.pdf) · [GitHub](https://github.com/karnaksp) · [Telegram](https://t.me/calmeds)
+> English note: this profile is primarily localized for Russian-speaking engineering teams; project names, stacks, commands, and documentation links are kept in their original form.
 
-## Featured Data Engineering Projects
+**Ссылки:** [CV / portfolio](https://karnaksp.github.io/karnaksp/) · [PDF resume](https://github.com/karnaksp/karnaksp/raw/main/Irinyakov_Denis.pdf) · [GitHub](https://github.com/karnaksp) · [Telegram](https://t.me/calmeds)
 
-| Project | Stack | Why it matters |
+## Ключевые Data Engineering проекты
+
+| Project | Stack | Почему это важно |
 | --- | --- | --- |
-| [investment-signals](https://github.com/karnaksp/investment-signals) | Python, Redpanda/Kafka, ClickHouse, Postgres, FastAPI, Dagster, Prometheus, Grafana | Production market anomaly pipeline: live ingestion, stream processing, signal storage, observability, admin cockpit, and docs. [Docs](https://karnaksp.github.io/investment-signals/) |
-| [stock-prices](https://github.com/karnaksp/stock-prices) | Python, Telegram Bot, CLI, Docker, MkDocs, GitHub Actions | Production data product for animated market videos from stocks, futures, FX, metals, and crypto data. [Docs](https://karnaksp.github.io/stock-prices/) |
-| [self-tg-approve](https://github.com/karnaksp/self-tg-approve) | Python, Telegram, Docker Compose, Ollama, LangChain, Neo4j | AI automation side project: channel access approval bot with graph-backed memory and local LLM components. |
-| [data-forge](https://github.com/karnaksp/data-forge) | Kafka, Debezium, Spark, Trino, MinIO, ClickHouse, Airflow, Superset | Applied fork-to-case-study: retail CDC/lakehouse runbook, validation SQL, Kafka checks, analytical query examples, and explicit contribution framing. |
-| [Oil-code](https://github.com/karnaksp/Oil-code) | Python, Jupyter, data contracts, validation CI, deterministic batch scoring | DS-to-DE conversion case for oil-property prediction: raw data contract, stdlib data-quality gate, deterministic batch scoring artifact, GitHub Actions validation, and monitoring reports. |
+| [investment-signals](https://github.com/karnaksp/investment-signals) | Python, Redpanda/Kafka, ClickHouse, Postgres, FastAPI, Dagster, Prometheus, Grafana | Production-конвейер рыночных аномалий: live ingestion, stream processing, хранение сигналов, observability, admin cockpit и документация. [Docs](https://karnaksp.github.io/investment-signals/) |
+| [stock-prices](https://github.com/karnaksp/stock-prices) | Python, Telegram Bot, CLI, Docker, MkDocs, GitHub Actions | Production data product для анимированных рыночных видео по акциям, фьючерсам, FX, металлам и crypto data. [Docs](https://karnaksp.github.io/stock-prices/) |
+| [self-tg-approve](https://github.com/karnaksp/self-tg-approve) | Python, Telegram, Docker Compose, Ollama, LangChain, Neo4j | Вторичный AI automation проект: бот для approval flow в Telegram-канале, graph-backed memory и локальные LLM-компоненты. |
+| [data-forge](https://github.com/karnaksp/data-forge) | Kafka, Debezium, Spark, Trino, MinIO, ClickHouse, Airflow, Superset | Applied fork-to-case-study: retail CDC/lakehouse runbook, validation SQL, Kafka-проверки, аналитические SQL-примеры и явное описание моего вклада. |
+| [Oil-code](https://github.com/karnaksp/Oil-code) | Python, Jupyter, data contracts, validation CI, deterministic batch scoring | DS-to-DE conversion case для предсказания свойств масел: raw data contract, stdlib data-quality gate, deterministic batch scoring artifact, GitHub Actions validation и monitoring reports. |
 
-## Core Stack
+## Основной стек
 
 - **Warehouses and storage:** Greenplum, ClickHouse, PostgreSQL, S3-compatible storage, Iceberg/Lakehouse concepts.
 - **Pipelines and orchestration:** Airflow, dbt, Dagster, dlt, Spark, Kafka/Redpanda.
@@ -22,13 +24,13 @@ I build production-oriented data systems: ETL/ELT pipelines, event streams, anal
 - **Engineering:** Python, SQL/PLpgSQL, Bash, Docker, GitHub Actions, GitLab Runner.
 - **Applied ML / AI:** pandas, scikit-learn, PyTorch, LLM tooling, Ollama, LangChain, MCP.
 
-## Work Highlights
+## Рабочий фокус
 
-- Designed and maintained ETL/ELT flows for analytical systems and data products.
-- Built Python services around data ingestion, validation, observability, and operational workflows.
-- Worked with DWH/lakehouse patterns, data quality automation, and metadata governance.
-- Led and mentored technical communities and project teams.
+- Проектировал и поддерживал ETL/ELT-потоки для аналитических систем и data products.
+- Делал Python-сервисы для ingestion, validation, observability и операционных workflows.
+- Работал с DWH/lakehouse-паттернами, автоматизацией data quality и metadata governance.
+- Вёл и менторил технические сообщества и проектные команды.
 
-## Learning And Archive
+## Обучение и архив
 
-Older DS/ML notebooks, hackathons, School 21 tasks, and forked learning repositories are intentionally grouped as archive material. [Educational-projects](https://github.com/karnaksp/Educational-projects) is the index for School 21, SQL, Python, DevOps, Linux, and monitoring practice. When a fork or notebook repo is featured, it is labeled as a lab/conversion case and includes an explicit contribution section instead of pretending to be original production work.
+Старые DS/ML notebooks, хакатоны, задания School 21 и учебные forks специально вынесены в архив. [Educational-projects](https://github.com/karnaksp/Educational-projects) — индекс практики по School 21, SQL, Python, DevOps, Linux и monitoring. Если fork или notebook repo попадает в витрину, он помечен как lab/conversion case и содержит явный раздел с моим вкладом, а не маскируется под оригинальный production-проект.
