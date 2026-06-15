@@ -11,24 +11,24 @@
   --text-light: #ffffff;        /* Светлый текст */
   --text-muted: #6c757d;        /* Приглушенный текст */
   --border-light: #e0e0e0;      /* Цвет границ */
-  
+
   /* Тени и эффекты */
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
+
   /* Скругления */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
   --border-radius-circle: 50%;
-  
+
   /* Переходы и анимации */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
+
   /* Типографика */
   --font-family-base: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --font-family-heading: 'Montserrat', 'Inter', sans-serif;
@@ -235,93 +235,6 @@ section.visible {
 .profile-photo:hover {
   transform: scale(1.05);
   box-shadow: var(--hover-shadow);
-}
-
-/* Витрина проектов */
-.section-lead {
-  max-width: 900px;
-  margin: -8px 0 28px;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  padding: 22px;
-  background: #fbfcfd;
-  border: 1px solid var(--border-light);
-  border-left: 4px solid #3a6ba4;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--card-shadow);
-}
-
-.project-card-production {
-  border-left-color: var(--primary-accent);
-}
-
-.project-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.project-card h3 {
-  margin: 0;
-  font-size: 1.35rem;
-}
-
-.project-card p {
-  margin: 0 0 14px;
-}
-
-.project-label {
-  flex: 0 0 auto;
-  padding: 5px 9px;
-  border-radius: var(--border-radius-sm);
-  background: #e9eef2;
-  color: var(--primary-dark);
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.project-stack {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.project-links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 0 12px;
-  border: 1px solid var(--primary-accent);
-  border-radius: var(--border-radius-sm);
-  color: var(--primary-accent);
-  font-weight: 600;
-}
-
-.project-links a:hover {
-  background: var(--primary-accent);
-  color: var(--text-light);
-  text-decoration: none;
 }
 
 /* Навыки */
@@ -599,66 +512,53 @@ section.visible {
   :root {
     --font-size-base: 15px;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.7rem;
   }
-  
+
   h3 {
     font-size: 1.3rem;
   }
-  
+
   .container {
     width: 90%;
     padding: 0 10px;
   }
-  
+
   header #branding,
   header nav {
     float: none;
     text-align: center;
     width: 100%;
   }
-  
+
   header #branding h1 {
     padding-right: 0;
   }
-  
+
   header ul {
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   header li {
     padding: 0 10px;
     margin-bottom: 10px;
   }
-  
+
   .skills-container {
     grid-template-columns: 1fr;
   }
 
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    min-height: auto;
-  }
-
-  .project-card-header {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  
   .skill-card {
     padding: 15px;
   }
-  
+
   .skill-icon {
     width: auto;
     max-width: 150px;
@@ -666,7 +566,7 @@ section.visible {
     max-height: 80px;
     object-fit: contain;
   }
-  
+
   .profile-photo {
     width: 150px;
     height: 150px;
@@ -674,19 +574,19 @@ section.visible {
     display: block;
     margin: 0 auto 20px;
   }
-  
+
   .elementor-progress-bar {
     font-size: 12px;
   }
-  
+
   .box {
     padding: 20px;
   }
-  
+
   .content-wrapper {
     flex-direction: column;
   }
-  
+
   #skills, #experience {
     width: 100%;
     max-width: 100%;
@@ -697,7 +597,7 @@ section.visible {
   .container {
     width: 90%;
   }
-  
+
   .skills-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
