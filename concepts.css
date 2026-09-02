@@ -120,9 +120,35 @@ html[data-concept] header .container {
 }
 
 html[data-concept] header #branding,
-html[data-concept] header nav {
+html[data-concept] header nav,
+html[data-concept] header .header-actions {
   float: none;
   margin: 0;
+}
+
+html[data-concept] header nav {
+  flex: 1;
+}
+
+html[data-concept] header .header-actions {
+  width: auto;
+  color: var(--concept-header-text);
+}
+
+html[data-concept] .language-switcher,
+html[data-concept] header .pdf-download {
+  border-color: color-mix(in srgb, var(--concept-header-text) 24%, transparent);
+  background: color-mix(in srgb, var(--concept-header-text) 6%, transparent);
+}
+
+html[data-concept] .language-option:hover,
+html[data-concept] header .pdf-download:hover {
+  background: var(--concept-header-link-bg);
+}
+
+html[data-concept] .language-option.is-active {
+  color: #fff;
+  background: var(--concept-link);
 }
 
 html[data-concept] header #branding h1 {
@@ -808,6 +834,11 @@ html[data-concept="console"] .concept-switcher {
   html[data-concept] header ul {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  html[data-concept] header .header-actions {
+    justify-content: center;
+    margin-bottom: 2px;
   }
 
   html[data-concept] header a {

@@ -189,6 +189,67 @@ header nav {
   margin-top: 10px;
 }
 
+header .header-actions {
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0 0 16px;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-option {
+  min-width: 38px;
+  min-height: 32px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  transition: color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.language-option.is-active {
+  color: #fff;
+  background: var(--primary-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+header .pdf-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 9px;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+}
+
+header .pdf-download:hover {
+  border-color: var(--primary-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
 /* Секции */
 section {
   padding: 40px 0;
@@ -507,6 +568,11 @@ section.visible {
   font-weight: 500;
 }
 
+#about a,
+#contact a {
+  overflow-wrap: anywhere;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   :root {
@@ -531,10 +597,16 @@ section.visible {
   }
 
   header #branding,
-  header nav {
+  header nav,
+  header .header-actions {
     float: none;
     text-align: center;
     width: 100%;
+  }
+
+  header .header-actions {
+    justify-content: center;
+    margin: 4px 0 12px;
   }
 
   header #branding h1 {

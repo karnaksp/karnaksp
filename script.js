@@ -133,7 +133,7 @@ function initChartBars() {
         if (links.length > 0) {
             tooltipContent += "<ul>";
             links.forEach((linkObj) => {
-                const title = linkObj.title || "Ссылка";
+                const title = linkObj.title || window.resumeI18n?.t("Ссылка") || "Ссылка";
                 const url = linkObj.url || "#";
                 tooltipContent += `<li><a href="${url}" target="_blank">${title}</a></li>`;
             });
@@ -239,6 +239,9 @@ function initBackToTop() {
     // Создаем кнопку "Наверх"
     const backToTop = document.createElement("div");
     backToTop.className = "back-to-top";
+    backToTop.setAttribute("role", "button");
+    backToTop.setAttribute("tabindex", "0");
+    backToTop.setAttribute("aria-label", window.resumeI18n?.t("Наверх") || "Наверх");
     backToTop.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" transform="rotate(180, 8, 8)"></path></svg>';
     document.body.appendChild(backToTop);
     
@@ -257,6 +260,13 @@ function initBackToTop() {
             top: 0,
             behavior: "smooth"
         });
+    });
+
+    backToTop.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            backToTop.click();
+        }
     });
 }
 

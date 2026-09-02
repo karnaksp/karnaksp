@@ -24,4 +24,6 @@ class DataDeveloperProfile(Developer):
 > *Подробное CV со ссылками на проекты.*
 
 
-Так же можно скачать [резюме в pdf](https://github.com/karnaksp/karnaksp/blob/main/Irinyakov_Denis.pdf).
+PDF-версии резюме: [русская](https://github.com/karnaksp/karnaksp/blob/main/Irinyakov_Denis.pdf) и [английская](https://github.com/karnaksp/karnaksp/blob/main/Irinyakov_Denis_EN.pdf).
+
+Презентация портфолио: [PowerPoint](output/portfolio/Denis_Irinyakov_Data_Engineer_Portfolio.pptx) и [PDF](output/portfolio/Denis_Irinyakov_Data_Engineer_Portfolio.pdf).
