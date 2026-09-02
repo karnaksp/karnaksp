@@ -80,16 +80,18 @@
 
     function setThemeButton(button, theme) {
         const isDark = theme === "dark";
+        const t = window.resumeI18n?.t || ((text) => text);
         button.classList.toggle("is-dark", isDark);
-        button.setAttribute("aria-label", isDark ? "Включить светлую тему" : "Включить темную тему");
-        button.title = isDark ? "Светлая тема" : "Темная тема";
+        button.setAttribute("aria-label", t(isDark ? "Включить светлую тему" : "Включить темную тему"));
+        button.title = t(isDark ? "Светлая тема" : "Темная тема");
         button.innerHTML = `<i class="fas ${isDark ? "fa-sun" : "fa-moon"}" aria-hidden="true"></i>`;
     }
 
     function createThemeControls(activeConcept, activeTheme, includeConceptOptions) {
+        const t = window.resumeI18n?.t || ((text) => text);
         const switcher = document.createElement("div");
         switcher.className = "concept-switcher";
-        switcher.setAttribute("aria-label", includeConceptOptions ? "Выбор концепции сайта" : "Выбор темы сайта");
+        switcher.setAttribute("aria-label", t(includeConceptOptions ? "Выбор концепции сайта" : "Выбор темы сайта"));
 
         if (includeConceptOptions) {
             concepts.forEach((concept) => {
@@ -97,8 +99,8 @@
                 button.type = "button";
                 button.className = "concept-option";
                 button.dataset.concept = concept.id;
-                button.title = concept.label;
-                button.setAttribute("aria-label", concept.label);
+                button.title = t(concept.label);
+                button.setAttribute("aria-label", t(concept.label));
                 button.style.setProperty("--swatch-a", concept.colors[0]);
                 button.style.setProperty("--swatch-b", concept.colors[1]);
                 button.innerHTML = "<span></span>";
@@ -128,6 +130,19 @@
             setThemeButton(themeButton, nextTheme);
         });
         switcher.appendChild(themeButton);
+
+        document.addEventListener("resume-language-change", () => {
+            const t = window.resumeI18n?.t || ((text) => text);
+            switcher.setAttribute("aria-label", t(includeConceptOptions ? "Выбор концепции сайта" : "Выбор темы сайта"));
+            switcher.querySelectorAll(".concept-option").forEach((button) => {
+                const concept = concepts.find((item) => item.id === button.dataset.concept);
+                if (concept) {
+                    button.title = t(concept.label);
+                    button.setAttribute("aria-label", t(concept.label));
+                }
+            });
+            setThemeButton(themeButton, document.documentElement.dataset.theme);
+        });
 
         document.body.appendChild(switcher);
         setActiveButton(switcher, activeConcept);
