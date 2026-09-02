@@ -201,9 +201,9 @@ header .header-actions {
   display: inline-flex;
   align-items: center;
   padding: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  border: 1px solid rgb(255 255 255 / 34%);
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgb(255 255 255 / 8%);
 }
 
 .language-option {
@@ -223,13 +223,13 @@ header .header-actions {
 }
 
 .language-option:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgb(255 255 255 / 12%);
 }
 
 .language-option.is-active {
   color: #fff;
   background: var(--primary-accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
 }
 
 header .pdf-download {

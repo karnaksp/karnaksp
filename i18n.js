@@ -153,7 +153,9 @@
         "Наверх": "Back to top"
     };
 
-    const reverseTranslations = new Map(Object.entries(translations).map(([ru, en]) => [en, ru]));
+    const translationEntries = Object.entries(translations);
+    const translationMap = new Map(translationEntries);
+    const reverseTranslations = new Map(translationEntries.map(([ru, en]) => [en, ru]));
     const textState = new WeakMap();
     const attributeState = new WeakMap();
     const translatableAttributes = ["alt", "title", "aria-label", "data-tooltip", "data-description", "data-links"];
@@ -171,10 +173,14 @@
 
     function resolveRussianKey(value) {
         const normalized = normalizeWhitespace(value);
-        if (Object.prototype.hasOwnProperty.call(translations, normalized)) {
+        if (translationMap.has(normalized)) {
             return normalized;
         }
         return reverseTranslations.get(normalized) || normalized;
+    }
+
+    function getTranslation(russianText) {
+        return translationMap.get(russianText) || russianText;
     }
 
     function translateTextNode(node, language) {
@@ -184,7 +190,7 @@
         }
 
         const state = textState.get(node);
-        const translated = language === "en" ? translations[state.russian] || state.russian : state.russian;
+        const translated = language === "en" ? getTranslation(state.russian) : state.russian;
         const nextValue = `${state.before}${translated}${state.after}`;
         if (node.nodeValue !== nextValue) {
             node.nodeValue = nextValue;
@@ -196,7 +202,7 @@
             const links = JSON.parse(value);
             links.forEach((link) => {
                 const russian = resolveRussianKey(link.title || "");
-                link.title = language === "en" ? translations[russian] || russian : russian;
+                link.title = language === "en" ? getTranslation(russian) : russian;
             });
             return JSON.stringify(links);
         } catch {
@@ -230,7 +236,7 @@
             } else {
                 const parts = splitWhitespace(source);
                 const russian = resolveRussianKey(parts.core);
-                const translated = language === "en" ? translations[russian] || russian : russian;
+                const translated = language === "en" ? getTranslation(russian) : russian;
                 nextValue = `${parts.before}${translated}${parts.after}`;
             }
 
@@ -295,7 +301,7 @@
     function applyLanguage(language, { syncUrl = true } = {}) {
         currentLanguage = language === "en" ? "en" : "ru";
         document.documentElement.lang = currentLanguage === "en" ? "en" : "ru-RU";
-        document.title = currentLanguage === "en" ? translations["CV Денис Ириняков"] : "CV Денис Ириняков";
+        document.title = currentLanguage === "en" ? getTranslation("CV Денис Ириняков") : "CV Денис Ириняков";
         translateTree(document.body, currentLanguage);
         updateControls(currentLanguage);
         localStorage.setItem(storageKey, currentLanguage);
@@ -306,7 +312,7 @@
     }
 
     function t(russianText) {
-        return currentLanguage === "en" ? translations[russianText] || russianText : russianText;
+        return currentLanguage === "en" ? getTranslation(russianText) : russianText;
     }
 
     window.resumeI18n = { applyLanguage, getLanguage: () => currentLanguage, t };
