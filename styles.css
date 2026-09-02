@@ -238,7 +238,7 @@ header .pdf-download {
   gap: 7px;
   min-height: 38px;
   padding: 0 12px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  border: 1px solid rgb(255 255 255 / 34%);
   border-radius: 9px;
   font-size: 0.78rem;
   font-weight: 750;
@@ -247,7 +247,7 @@ header .pdf-download {
 
 header .pdf-download:hover {
   border-color: var(--primary-accent);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgb(255 255 255 / 8%);
 }
 
 /* Секции */
